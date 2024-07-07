@@ -1,0 +1,11 @@
+Building PatriotBit
+
+Use the autogen script to prepare the build environment.
+
+    ./autogen.sh
+    ./configure
+    make
+
+See doc/build-*.md for instructions on building patriotbitd,
+the intended-for-services, no-graphical-interface, reference
+implementation of PatriotBit.
