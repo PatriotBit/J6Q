@@ -4074,7 +4074,7 @@ ad esempio: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@foo
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4314,8 +4314,8 @@ Se il file non esiste, crealo assegnando i permessi di lettura solamente al prop
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Connetti a JSON-RPC su &lt;port&gt; (predefinita: 9998 o testnet: 19998)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Connetti a JSON-RPC su &lt;port&gt; (predefinita: 51401 o testnet: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="196"/>
@@ -4719,7 +4719,7 @@ Se il file non esiste, crealo assegnando i permessi di lettura solamente al prop
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
+        <source>Listen for connections on &lt;port&gt; (default: 51400 or testnet: 14000)</source>
         <translation type="unfinished"/>
     </message>
     <message>

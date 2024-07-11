@@ -4073,8 +4073,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Escuchar conexiones JSON-RPC en &lt;port&gt; (predeterminado: 9998 o testnet: 19998)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Escuchar conexiones JSON-RPC en &lt;port&gt; (predeterminado: 51401 o testnet: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="103"/>
@@ -4314,8 +4314,8 @@ Si el archivo no existe, créelo con permiso de lectura solamente del propietari
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Conectar a JSON-RPC en &lt;port&gt; (predeterminado: 9998 o testnet: 19998)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Conectar a JSON-RPC en &lt;port&gt; (predeterminado: 51401 o testnet: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="196"/>
@@ -4720,8 +4720,8 @@ Si el archivo no existe, créelo con permiso de lectura solamente del propietari
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>Escuchar las conexiones en &lt;port&gt; (por defecto: 9999 o testnet: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 51400 or testnet: 14000)</source>
+        <translation>Escuchar las conexiones en &lt;port&gt; (por defecto: 51400 o testnet: 14000)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="277"/>

@@ -267,7 +267,7 @@ TEST(CorruptionTest, TableFileIndexData) {
 
   Corrupt(kTableFile, -2000, 500);
   Reopen();
-  Check(5000, 9999);
+  Check(5000, 51400);
 }
 
 TEST(CorruptionTest, MissingDescriptor) {

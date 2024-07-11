@@ -4075,8 +4075,8 @@ zum Beispiel: alertnotify=echo %%s | mail -s \&quot;Chaincoin Alert\&quot; admin
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>&lt;port&gt;nach JSON-RPC-Verbindungen abhören (Standard: 9998 oder Testnetz: 19998)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>&lt;port&gt;nach JSON-RPC-Verbindungen abhören (Standard: 51401 oder Testnetz: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="103"/>
@@ -4314,8 +4314,8 @@ Falls die Konfigurationsdatei nicht existiert, erzeugen Sie diese bitte mit Lese
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Mit JSON-RPC auf &lt;port&gt; verbinden (Standard: 9998 oder Testnetz: 19998)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Mit JSON-RPC auf &lt;port&gt; verbinden (Standard: 51401 oder Testnetz: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="196"/>
@@ -4720,8 +4720,8 @@ Chaincoin Core wird heruntergefahren.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>&lt;port&gt; nach Verbindungen abhören (Standard: 9999 oder Testnetz: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 51400 or testnet: 14000)</source>
+        <translation>&lt;port&gt; nach Verbindungen abhören (Standard: 51400 oder Testnetz: 14000)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="277"/>

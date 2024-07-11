@@ -4071,8 +4071,8 @@ rpcpassword=%s
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Очаквай JSON-RPC входящи връзки на &lt;port&gt; (по подразбиране: 9998 или за тестовата мрежа: 19998)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Очаквай JSON-RPC входящи връзки на &lt;port&gt; (по подразбиране: 51401 или за тестовата мрежа: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="103"/>
@@ -4311,8 +4311,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Свързване към JSON-RPC през &lt;port&gt; (по подразбиране: 9998 или за тест мрежата: 19998)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Свързване към JSON-RPC през &lt;port&gt; (по подразбиране: 51401 или за тест мрежата: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="196"/>
@@ -4716,8 +4716,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>Слушане за входящи връзки на  &lt;port&gt; (по подразбиране: 9999 или за тестовата мрежа: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 51400 or testnet: 14000)</source>
+        <translation>Слушане за входящи връзки на  &lt;port&gt; (по подразбиране: 51400 или за тестовата мрежа: 14000)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="277"/>

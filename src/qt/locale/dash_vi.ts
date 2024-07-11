@@ -4072,8 +4072,8 @@ ví dụ: alertnotify=echo %%s | mail -s &quot;Cảnh báo Chaincoin&quot; admin
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Lắng nghe kết nối từ JSON-RPC trên &lt;cổng&gt; (ngầm định: 9998 hoặc mạng thử: 19998)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Lắng nghe kết nối từ JSON-RPC trên &lt;cổng&gt; (ngầm định: 51401 hoặc mạng thử: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="103"/>
@@ -4311,8 +4311,8 @@ Nếu tệp không tồn tại, tạo nó với quyền tệp owner-readable-onl
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Kết nối tới JSON-RPC trên &lt;cổng&gt; (ngầm định: 9998 hoặc mạng thử: 19998)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Kết nối tới JSON-RPC trên &lt;cổng&gt; (ngầm định: 51401 hoặc mạng thử: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="196"/>
@@ -4716,8 +4716,8 @@ Nếu tệp không tồn tại, tạo nó với quyền tệp owner-readable-onl
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>Lắng nghe kết nối từ &lt;cổng&gt; (ngầm định: 9999 hoặc mạng thử: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 51400 or testnet: 14000)</source>
+        <translation>Lắng nghe kết nối từ &lt;cổng&gt; (ngầm định: 51400 hoặc mạng thử: 14000)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="277"/>

@@ -4071,8 +4071,8 @@ exemplo: alertnotify=echo %%s | mail -s &quot;Alerta Chaincoin&quot; admin@foo.c
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Escutar por ligações JSON-RPC na porta &lt;port&gt; (omissão: 9998 ou rede de testes: 19998)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Escutar por ligações JSON-RPC na porta &lt;port&gt; (omissão: 51401 ou rede de testes: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="103"/>
@@ -4310,8 +4310,8 @@ Se o ficheiro não existir, deve criá-lo só com permissões de leitura para o 
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Ligar ao JSON-RPC na porta &lt;port&gt; (omissão: 9998 ou rede de testes: 19998)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Ligar ao JSON-RPC na porta &lt;port&gt; (omissão: 51401 ou rede de testes: 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="196"/>
@@ -4715,8 +4715,8 @@ Se o ficheiro não existir, deve criá-lo só com permissões de leitura para o 
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>Escutar ligações na &lt;port&gt; (omissão: 9999 ou rede de testes: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 51400 or testnet: 14000)</source>
+        <translation>Escutar ligações na &lt;port&gt; (omissão: 51400 ou rede de testes: 14000)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="277"/>
