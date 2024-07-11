@@ -143,7 +143,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="darksendRounds">
+          <widget class="QSpinBox" name="freedomsendRounds">
            <property name="minimum">
             <number>2</number>
            </property>
@@ -162,7 +162,7 @@
          <item>
           <widget class="QLabel" name="label_2">
            <property name="toolTip">
-            <string>This amount acts as a threshold to turn off Darksend once it's reached.</string>
+            <string>This amount acts as a threshold to turn off Freedomsend once it's reached.</string>
            </property>
            <property name="statusTip">
             <string notr="true"/>
@@ -182,7 +182,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="anonymizeDarkcoin">
+          <widget class="QSpinBox" name="anonymizePatriotBit">
            <property name="minimum">
             <number>2</number>
            </property>

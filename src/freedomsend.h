@@ -2,23 +2,23 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DARKSEND_H
-#define DARKSEND_H
+#ifndef FREEDOMSEND_H
+#define FREEDOMSEND_H
 
 #include "core.h"
 #include "main.h"
 #include "sync.h"
 #include "activemasternode.h"
 #include "masternodeman.h"
-#include "darksend-relay.h"
+#include "freedomsend-relay.h"
 
 class CTxIn;
-class CDarksendPool;
-class CDarkSendSigner;
+class CFreedomsendPool;
+class CFreedomSendSigner;
 class CMasterNodeVote;
 class CBitcoinAddress;
-class CDarksendQueue;
-class CDarksendBroadcastTx;
+class CFreedomsendQueue;
+class CFreedomsendBroadcastTx;
 class CActiveMasternode;
 
 // pool states for mixing
@@ -39,25 +39,25 @@ class CActiveMasternode;
 #define MASTERNODE_REJECTED                    0
 #define MASTERNODE_RESET                       -1
 
-#define DARKSEND_QUEUE_TIMEOUT                 30
-#define DARKSEND_SIGNING_TIMEOUT               15
+#define FREEDOMSEND_QUEUE_TIMEOUT                 30
+#define FREEDOMSEND_SIGNING_TIMEOUT               15
 
 // used for anonymous relaying of inputs/outputs/sigs
-#define DARKSEND_RELAY_IN                 1
-#define DARKSEND_RELAY_OUT                2
-#define DARKSEND_RELAY_SIG                3
+#define FREEDOMSEND_RELAY_IN                 1
+#define FREEDOMSEND_RELAY_OUT                2
+#define FREEDOMSEND_RELAY_SIG                3
 
-extern CDarksendPool darkSendPool;
-extern CDarkSendSigner darkSendSigner;
-extern std::vector<CDarksendQueue> vecDarksendQueue;
+extern CFreedomsendPool freedomSendPool;
+extern CFreedomSendSigner freedomSendSigner;
+extern std::vector<CFreedomsendQueue> vecFreedomsendQueue;
 extern std::string strMasterNodePrivKey;
-extern map<uint256, CDarksendBroadcastTx> mapDarksendBroadcastTxes;
+extern map<uint256, CFreedomsendBroadcastTx> mapFreedomsendBroadcastTxes;
 extern CActiveMasternode activeMasternode;
 
-// get the Darksend chain depth for a given input
-int GetInputDarksendRounds(CTxIn in, int rounds=0);
+// get the Freedomsend chain depth for a given input
+int GetInputFreedomsendRounds(CTxIn in, int rounds=0);
 
-/** Holds an Darksend input
+/** Holds an Freedomsend input
  */
 class CTxDSIn : public CTxIn
 {
@@ -76,7 +76,7 @@ public:
     }
 };
 
-/** Holds an Darksend output
+/** Holds an Freedomsend output
  */
 class CTxDSOut : public CTxOut
 {
@@ -92,8 +92,8 @@ public:
     }
 };
 
-// A clients transaction in the darksend pool
-class CDarkSendEntry
+// A clients transaction in the freedomsend pool
+class CFreedomSendEntry
 {
 public:
     bool isSet;
@@ -104,14 +104,14 @@ public:
     CTransaction txSupporting;
     int64_t addedTime; // time in UTC milliseconds
 
-    CDarkSendEntry()
+    CFreedomSendEntry()
     {
         isSet = false;
         collateral = CTransaction();
         amount = 0;
     }
 
-    /// Add entries to use for Darksend
+    /// Add entries to use for Freedomsend
     bool Add(const std::vector<CTxIn> vinIn, int64_t amountIn, const CTransaction collateralIn, const std::vector<CTxOut> voutIn)
     {
         if(isSet){return false;}
@@ -148,15 +148,15 @@ public:
 
     bool IsExpired()
     {
-        return (GetTime() - addedTime) > DARKSEND_QUEUE_TIMEOUT;// 120 seconds
+        return (GetTime() - addedTime) > FREEDOMSEND_QUEUE_TIMEOUT;// 120 seconds
     }
 };
 
 
 /**
- * A currently inprogress Darksend merge and denomination information
+ * A currently inprogress Freedomsend merge and denomination information
  */
-class CDarksendQueue
+class CFreedomsendQueue
 {
 public:
     CTxIn vin;
@@ -165,7 +165,7 @@ public:
     bool ready; //ready for submit
     std::vector<unsigned char> vchSig;
 
-    CDarksendQueue()
+    CFreedomsendQueue()
     {
         nDenom = 0;
         vin = CTxIn();
@@ -206,7 +206,7 @@ public:
         return false;
     }
 
-    /** Sign this Darksend transaction
+    /** Sign this Freedomsend transaction
      *  \return true if all conditions are met:
      *     1) we have an active Masternode,
      *     2) we have a valid Masternode private key,
@@ -217,10 +217,10 @@ public:
 
     bool Relay();
 
-    /// Is this Darksend expired?
+    /// Is this Freedomsend expired?
     bool IsExpired()
     {
-        return (GetTime() - time) > DARKSEND_QUEUE_TIMEOUT;// 120 seconds
+        return (GetTime() - time) > FREEDOMSEND_QUEUE_TIMEOUT;// 120 seconds
     }
 
     /// Check if we have a valid Masternode address
@@ -228,9 +228,9 @@ public:
 
 };
 
-/** Helper class to store Darksend transaction (tx) information.
+/** Helper class to store Freedomsend transaction (tx) information.
  */
-class CDarksendBroadcastTx
+class CFreedomsendBroadcastTx
 {
 public:
     CTransaction tx;
@@ -241,7 +241,7 @@ public:
 
 /** Helper object for signing and checking signatures
  */
-class CDarkSendSigner
+class CFreedomSendSigner
 {
 public:
     /// Is the inputs associated with this public key? (and there is 1000 DASH - checking if valid masternode)
@@ -254,14 +254,14 @@ public:
     bool VerifyMessage(CPubKey pubkey, std::vector<unsigned char>& vchSig, std::string strMessage, std::string& errorMessage);
 };
 
-/** Used to keep track of current status of Darksend pool
+/** Used to keep track of current status of Freedomsend pool
  */
-class CDarksendPool
+class CFreedomsendPool
 {
 public:
 
-    std::vector<CDarkSendEntry> myEntries; // clients entries
-    std::vector<CDarkSendEntry> entries; // Masternode entries
+    std::vector<CFreedomSendEntry> myEntries; // clients entries
+    std::vector<CFreedomSendEntry> entries; // Masternode entries
     CTransaction finalTransaction; // the finalized transaction ready for signing
 
     int64_t lastTimeChanged; // last time the 'state' changed, in UTC milliseconds
@@ -301,9 +301,9 @@ public:
     //debugging data
     std::string strAutoDenomResult;
 
-    CDarksendPool()
+    CFreedomsendPool()
     {
-        /* Darksend uses collateral addresses to trust parties entering the pool
+        /* Freedomsend uses collateral addresses to trust parties entering the pool
             to behave themselves. If they don't it takes their money. */
 
         cachedLastSuccess = 0;
@@ -316,22 +316,22 @@ public:
         SetNull();
     }
 
-    /** Process a Darksend message using the Darksend protocol
+    /** Process a Freedomsend message using the Freedomsend protocol
      * \param pfrom
      * \param strCommand lower case command string; valid values are:
      *        Command  | Description
      *        -------- | -----------------
-     *        dsa      | Darksend Acceptable
-     *        dsc      | Darksend Complete
-     *        dsf      | Darksend Final tx
-     *        dsi      | Darksend vIn
-     *        dsq      | Darksend Queue
-     *        dss      | Darksend Signal Final Tx
-     *        dssu     | Darksend status update
-     *        dssub    | Darksend Subscribe To
+     *        dsa      | Freedomsend Acceptable
+     *        dsc      | Freedomsend Complete
+     *        dsf      | Freedomsend Final tx
+     *        dsi      | Freedomsend vIn
+     *        dsq      | Freedomsend Queue
+     *        dss      | Freedomsend Signal Final Tx
+     *        dssu     | Freedomsend status update
+     *        dssub    | Freedomsend Subscribe To
      * \param vRecv
      */
-    void ProcessMessageDarksend(CNode* pfrom, std::string& strCommand, CDataStream& vRecv);
+    void ProcessMessageFreedomsend(CNode* pfrom, std::string& strCommand, CDataStream& vRecv);
 
     void InitCollateralAddress(){
         std::string strAddress = "";
@@ -394,15 +394,15 @@ public:
     void UpdateState(unsigned int newState)
     {
         if (fMasterNode && (newState == POOL_STATUS_ERROR || newState == POOL_STATUS_SUCCESS)){
-            LogPrintf("CDarksendPool::UpdateState() - Can't set state to ERROR or SUCCESS as a Masternode. \n");
+            LogPrintf("CFreedomsendPool::UpdateState() - Can't set state to ERROR or SUCCESS as a Masternode. \n");
             return;
         }
 
-        LogPrintf("CDarksendPool::UpdateState() == %d | %d \n", state, newState);
+        LogPrintf("CFreedomsendPool::UpdateState() == %d | %d \n", state, newState);
         if(state != newState){
             lastTimeChanged = GetTimeMillis();
             if(fMasterNode) {
-                RelayStatus(darkSendPool.sessionID, darkSendPool.GetState(), darkSendPool.GetEntriesCount(), MASTERNODE_RESET);
+                RelayStatus(freedomSendPool.sessionID, freedomSendPool.GetState(), freedomSendPool.GetEntriesCount(), MASTERNODE_RESET);
             }
         }
         state = newState;
@@ -429,11 +429,11 @@ public:
     /// Is this amount compatible with other client in the pool?
     bool IsCompatibleWithSession(int64_t nAmount, CTransaction txCollateral, std::string& strReason);
 
-    /// Passively run Darksend in the background according to the configuration in settings (only for QT)
+    /// Passively run Freedomsend in the background according to the configuration in settings (only for QT)
     bool DoAutomaticDenominating(bool fDryRun=false, bool ready=false);
-    bool PrepareDarksendDenominate();
+    bool PrepareFreedomsendDenominate();
 
-    /// Check for process in Darksend
+    /// Check for process in Freedomsend
     void Check();
     void CheckFinalTransaction();
     /// Charge fees to bad actors (Charge clients a fee if they're abusive)
@@ -453,8 +453,8 @@ public:
     /// Check that all inputs are signed. (Are all inputs signed?)
     bool SignaturesComplete();
     /// As a client, send a transaction to a Masternode to start the denomination process
-    void SendDarksendDenominate(std::vector<CTxIn>& vin, std::vector<CTxOut>& vout, int64_t amount);
-    /// Get Masternode updates about the progress of Darksend
+    void SendFreedomsendDenominate(std::vector<CTxIn>& vin, std::vector<CTxOut>& vout, int64_t amount);
+    /// Get Masternode updates about the progress of Freedomsend
     bool StatusUpdate(int newState, int newEntriesCount, int newAccepted, std::string& error, int newSessionID=0);
 
     /// As a client, check and sign the final transaction
@@ -485,7 +485,7 @@ public:
 
 
     //
-    // Relay Darksend Messages
+    // Relay Freedomsend Messages
     //
 
     void RelayFinalTransaction(const int sessionID, const CTransaction& txNew);
@@ -496,6 +496,6 @@ public:
     void RelayCompletedTransaction(const int sessionID, const bool error, const std::string errorMessage);
 };
 
-void ThreadCheckDarkSendPool();
+void ThreadCheckFreedomSendPool();
 
 #endif

@@ -41,7 +41,7 @@ class CSporkManager;
 #include "key.h"
 #include "util.h"
 #include "protocol.h"
-#include "darksend.h"
+#include "freedomsend.h"
 #include <boost/lexical_cast.hpp>
 
 using namespace std;

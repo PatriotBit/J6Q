@@ -890,7 +890,7 @@ Wird zugmachd, wails bessa is.</translation>
     </message>
     <message>
         <location filename="../forms/coincontroldialog.ui" line="461"/>
-        <source>Darksend Rounds</source>
+        <source>Freedomsend Rounds</source>
         <translation>Wie ofd die Kapuzzn aufsezzn</translation>
     </message>
     <message>
@@ -1121,88 +1121,88 @@ Wird zugmachd, wails bessa is.</translation>
     </message>
 </context>
 <context>
-    <name>DarksendConfig</name>
+    <name>FreedomsendConfig</name>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="14"/>
-        <source>Configure Darksend</source>
-        <translation>Kapuzzngoid-Ainschdellunga (Darksend)</translation>
+        <location filename="../forms/freedomsendconfig.ui" line="14"/>
+        <source>Configure Freedomsend</source>
+        <translation>Kapuzzngoid-Ainschdellunga (Freedomsend)</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="26"/>
+        <location filename="../forms/freedomsendconfig.ui" line="26"/>
         <source>Basic Privacy</source>
         <translation>Oifache Kapuzzn (Bäisik)</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="39"/>
+        <location filename="../forms/freedomsendconfig.ui" line="39"/>
         <source>High Privacy</source>
         <translation>Suppa Kapuzzn (Hai)</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="52"/>
+        <location filename="../forms/freedomsendconfig.ui" line="52"/>
         <source>Maximum Privacy</source>
         <translation>Ultraste Kapuzzn (maximum)</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="65"/>
+        <location filename="../forms/freedomsendconfig.ui" line="65"/>
         <source>Please select a privacy level.</source>
         <translation>Suchda aus, wih guud daine Kapuzzal sain solln..</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="78"/>
+        <location filename="../forms/freedomsendconfig.ui" line="78"/>
         <source>Use 2 separate masternodes to mix funds up to 1000 DASH</source>
         <translation>Zwo faschihdene Mastanoods füa Beträge bis 1000DRK</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="91"/>
+        <location filename="../forms/freedomsendconfig.ui" line="91"/>
         <source>Use 8 separate masternodes to mix funds up to 1000 DASH</source>
         <translation>Achd faschihdene Mastanoods füa Beträge bis 1000DRK</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="104"/>
+        <location filename="../forms/freedomsendconfig.ui" line="104"/>
         <source>Use 16 separate masternodes</source>
         <translation>Sechzähn faschihdene Mastanoods bnuzn !! (SO KÖRTS!)</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="117"/>
+        <location filename="../forms/freedomsendconfig.ui" line="117"/>
         <source>This option is the quickest and will cost about ~0.025 DASH to anonymize 1000 DASH</source>
         <translation>S´ god am schnellsdn und kosst so umgfahr 0.025 DASH um 1000 DASH dih Kapuzzn aufzumsäzzn.</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="130"/>
+        <location filename="../forms/freedomsendconfig.ui" line="130"/>
         <source>This option is moderately fast and will cost about 0.05 DASH to anonymize 1000 DASH</source>
         <translation>S´ god so middl schnell und kosst so umgfahr 0.05 DASH dih Kapuzzn aufzumsäzzn.</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="156"/>
+        <location filename="../forms/freedomsendconfig.ui" line="156"/>
         <source>0.1 DASH per 1000 DASH you anonymize.</source>
         <translation>kost zirka 0.1 DASH per 1000 Kapuzzn-DASH </translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="143"/>
+        <location filename="../forms/freedomsendconfig.ui" line="143"/>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>S´ beschde, dauad aba scho und kosst so umgfahr</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="43"/>
-        <location filename="../darksendconfig.cpp" line="58"/>
-        <location filename="../darksendconfig.cpp" line="73"/>
-        <source>Darksend Configuration</source>
-        <translation>Kapuzzngoid-Ainschdellunga (Darksend+)</translation>
+        <location filename="../freedomsendconfig.cpp" line="43"/>
+        <location filename="../freedomsendconfig.cpp" line="58"/>
+        <location filename="../freedomsendconfig.cpp" line="73"/>
+        <source>Freedomsend Configuration</source>
+        <translation>Kapuzzngoid-Ainschdellunga (Freedomsend+)</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="44"/>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
-        <translation>Di Kapuzzngoid-Ainschdellunga (Darksend+) sin edzd auf &quot;Bäisik - Oifache Kapuzzn&quot; (%1 and 2 rounds). Des kansch fai immä ändan, wendas nimma passd. Oifach auf di Ainschdellunga druggn.</translation>
+        <location filename="../freedomsendconfig.cpp" line="44"/>
+        <source>Freedomsend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <translation>Di Kapuzzngoid-Ainschdellunga (Freedomsend+) sin edzd auf &quot;Bäisik - Oifache Kapuzzn&quot; (%1 and 2 rounds). Des kansch fai immä ändan, wendas nimma passd. Oifach auf di Ainschdellunga druggn.</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="59"/>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
-        <translation>Di Kapuzzngoid-Ainschdellunga (Darksend+) sin edzd auf &quot;Hai - Suppa Kapuzzn&quot; (%1 and 8 rounds). Des kansch fai immä ändan, wendas nimma passd. Oifach auf di Ainschdellunga druggn.</translation>
+        <location filename="../freedomsendconfig.cpp" line="59"/>
+        <source>Freedomsend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <translation>Di Kapuzzngoid-Ainschdellunga (Freedomsend+) sin edzd auf &quot;Hai - Suppa Kapuzzn&quot; (%1 and 8 rounds). Des kansch fai immä ändan, wendas nimma passd. Oifach auf di Ainschdellunga druggn.</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="74"/>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
-        <translation>Di Kapuzzngoid-Ainschdellunga (Darksend+) sin edzd auf &quot;Maximum&quot; - mid da Ultrasdn Kapuzzn übahaupt (%1 and 8 rounds). Des kansch fai immä ändan, wendas nimma passd. Oifach auf di Ainschdellunga druggn.</translation>
+        <location filename="../freedomsendconfig.cpp" line="74"/>
+        <source>Freedomsend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <translation>Di Kapuzzngoid-Ainschdellunga (Freedomsend+) sin edzd auf &quot;Maximum&quot; - mid da Ultrasdn Kapuzzn übahaupt (%1 and 8 rounds). Des kansch fai immä ändan, wendas nimma passd. Oifach auf di Ainschdellunga druggn.</translation>
     </message>
 </context>
 <context>
@@ -1500,12 +1500,12 @@ gschbield wiad.&lt;br&gt;&lt;br&gt;Je öfdas desto bessa (!!!), kost aber au mea
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="141"/>
-        <source>Darksend rounds to use</source>
-        <translation>Kapuzznrundn di ham mogschd (Darksend rounds)</translation>
+        <source>Freedomsend rounds to use</source>
+        <translation>Kapuzznrundn di ham mogschd (Freedomsend rounds)</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="165"/>
-        <source>This amount acts as a threshold to turn off Darksend once it&apos;s reached.</source>
+        <source>This amount acts as a threshold to turn off Freedomsend once it&apos;s reached.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1825,7 +1825,7 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="336"/>
-        <source>Darksend Balance:</source>
+        <source>Freedomsend Balance:</source>
         <translation>Kapuzzngoid tuto kompletti:</translation>
     </message>
     <message>
@@ -1863,8 +1863,8 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
         <location filename="../overviewpage.cpp" line="453"/>
         <location filename="../overviewpage.cpp" line="467"/>
         <location filename="../overviewpage.cpp" line="481"/>
-        <source>Darksend</source>
-        <translation>Darksend</translation>
+        <source>Freedomsend</source>
+        <translation>Freedomsend</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="839"/>
@@ -1878,8 +1878,8 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="896"/>
-        <source>Try to manually submit a Darksend request.</source>
-        <translation>Versuschsd hald per Hond a Darksend-Za-lungs-an-wai-sung zu ma´ha</translation>
+        <source>Try to manually submit a Freedomsend request.</source>
+        <translation>Versuschsd hald per Hond a Freedomsend-Za-lungs-an-wai-sung zu ma´ha</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="899"/>
@@ -1888,8 +1888,8 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="918"/>
-        <source>Reset the current status of Darksend (can interrupt Darksend if it&apos;s in the process of Mixing, which can cost you money!)</source>
-        <translation>S´ Kapuzzn-ma´ha und Hüdchen-Schbuin [Darksend] aufhörn (auf die harte Tua). OBACHT, kann toija wean!</translation>
+        <source>Reset the current status of Freedomsend (can interrupt Freedomsend if it&apos;s in the process of Mixing, which can cost you money!)</source>
+        <translation>S´ Kapuzzn-ma´ha und Hüdchen-Schbuin [Freedomsend] aufhörn (auf die harte Tua). OBACHT, kann toija wean!</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="924"/>
@@ -1918,13 +1918,13 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
         <location filename="../overviewpage.cpp" line="146"/>
         <location filename="../overviewpage.cpp" line="352"/>
         <location filename="../overviewpage.cpp" line="495"/>
-        <source>Start Darksend Mixing</source>
+        <source>Start Freedomsend Mixing</source>
         <translation>´S Kapuzzal-Hütchenschbui starten</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="148"/>
         <location filename="../overviewpage.cpp" line="497"/>
-        <source>Stop Darksend Mixing</source>
+        <source>Stop Freedomsend Mixing</source>
         <translation>Kapuzzal-Schbui schdoppn</translation>
     </message>
     <message>
@@ -1949,16 +1949,16 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="424"/>
-        <source>Last Darksend message:
+        <source>Last Freedomsend message:
 </source>
-        <translation>Läzde Darksend Mässidsch:
+        <translation>Läzde Freedomsend Mässidsch:
 </translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="377"/>
         <location filename="../overviewpage.cpp" line="406"/>
-        <source>Darksend is idle.</source>
-        <translation>Da Darksend hadn Finga im Bauchnabl und dängd nach...</translation>
+        <source>Freedomsend is idle.</source>
+        <translation>Da Freedomsend hadn Finga im Bauchnabl und dängd nach...</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="381"/>
@@ -1967,7 +1967,7 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="387"/>
-        <source>Darksend request complete: Your transaction was accepted into the pool!</source>
+        <source>Freedomsend request complete: Your transaction was accepted into the pool!</source>
         <translation>Huiiiii, und Losgäds! S´ Kapuzzal is ankomm´n und wiad ezd gmischd! (&quot;accepted into pool&quot;)</translation>
     </message>
     <message>
@@ -2014,8 +2014,8 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="410"/>
-        <source>Darksend request incomplete:</source>
-        <translation>Darksend kann no ned gschdarded wean:</translation>
+        <source>Freedomsend request incomplete:</source>
+        <translation>Freedomsend kann no ned gschdarded wean:</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="410"/>
@@ -2024,8 +2024,8 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="412"/>
-        <source>Darksend request complete:</source>
-        <translation>Darksend gehd richdig los:</translation>
+        <source>Freedomsend request complete:</source>
+        <translation>Freedomsend gehd richdig los:</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="414"/>
@@ -2054,17 +2054,17 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="454"/>
-        <source>Darksend was successfully reset.</source>
-        <translation>Di Darksend (Kapuzzn-ma´ha)-Eischdellunga san wida zruck gsezd woan.</translation>
+        <source>Freedomsend was successfully reset.</source>
+        <translation>Di Freedomsend (Kapuzzn-ma´ha)-Eischdellunga san wida zruck gsezd woan.</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="468"/>
-        <source>Darksend requires at least %1 to use.</source>
+        <source>Freedomsend requires at least %1 to use.</source>
         <translation>Zum Kapuzzn-ma´ha brauchsch mindeschdns %1.</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="482"/>
-        <source>Wallet is locked and user declined to unlock. Disabling Darksend.</source>
+        <source>Wallet is locked and user declined to unlock. Disabling Freedomsend.</source>
         <translation>Da Goidbaidl is zua und der Depp willn auned aufma´ha. Kapuzzn wean ezd koine mea gmachd. </translation>
     </message>
 </context>
@@ -2754,8 +2754,8 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="752"/>
-        <source>Darksend</source>
-        <translation>Darksend</translation>
+        <source>Freedomsend</source>
+        <translation>Freedomsend</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="771"/>
@@ -2822,8 +2822,8 @@ Aba, wards ab, des wird. Brauchd bloss a Minudn bis der Darkcon Koa mid di andan
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="155"/>
-        <source>(darksend requires this amount to be rounded up to the nearest %1).</source>
-        <translation>(darksend brauchd den Betrag damids zum nägschdn %1 aufgrunded werdn kann)</translation>
+        <source>(freedomsend requires this amount to be rounded up to the nearest %1).</source>
+        <translation>(freedomsend brauchd den Betrag damids zum nägschdn %1 aufgrunded werdn kann)</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="160"/>
@@ -3596,8 +3596,8 @@ Wenn dai Kischdn rechd schiach ausschaugd, dann sagen di Andan &quot;bäh&quot; 
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="358"/>
-        <source>Received via Darksend</source>
-        <translation>Griggd üban Darksend</translation>
+        <source>Received via Freedomsend</source>
+        <translation>Griggd üban Freedomsend</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="361"/>
@@ -3616,27 +3616,27 @@ Wenn dai Kischdn rechd schiach ausschaugd, dann sagen di Andan &quot;bäh&quot; 
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="368"/>
-        <source>Darksend Denominate</source>
+        <source>Freedomsend Denominate</source>
         <translation>Zum Kapuzzal-ma´ha kloina gmachd</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="370"/>
-        <source>Darksend Collateral Payment</source>
-        <translation>Darksend Schudzgoid</translation>
+        <source>Freedomsend Collateral Payment</source>
+        <translation>Freedomsend Schudzgoid</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="372"/>
-        <source>Darksend Make Collateral Inputs</source>
+        <source>Freedomsend Make Collateral Inputs</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="374"/>
-        <source>Darksend Create Denominations</source>
+        <source>Freedomsend Create Denominations</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="376"/>
-        <source>Darksent</source>
+        <source>Freedomsent</source>
         <translation>mit Kappuzal gschickd</translation>
     </message>
     <message>
@@ -3720,28 +3720,28 @@ Wenn dai Kischdn rechd schiach ausschaugd, dann sagen di Andan &quot;bäh&quot; 
     </message>
     <message>
         <location filename="../transactionview.cpp" line="81"/>
-        <source>Darksent</source>
+        <source>Freedomsent</source>
         <translation>mit Kappuzal gschickd</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="82"/>
-        <source>Darksend Make Collateral Inputs</source>
+        <source>Freedomsend Make Collateral Inputs</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="83"/>
-        <source>Darksend Create Denominations</source>
+        <source>Freedomsend Create Denominations</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="84"/>
-        <source>Darksend Denominate</source>
+        <source>Freedomsend Denominate</source>
         <translation>Zum Kapuzzal-ma´ha kloina gmachd</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="85"/>
-        <source>Darksend Collateral Payment</source>
-        <translation>Darksend Schudzgoid</translation>
+        <source>Freedomsend Collateral Payment</source>
+        <translation>Freedomsend Schudzgoid</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="86"/>
@@ -3988,13 +3988,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="46"/>
-        <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
+        <source>Freedomsend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="49"/>
-        <source>Disable all Masternode and Darksend related functionality (0-1, default: 0)</source>
-        <translation>Ois was mid die Kapuzzn zum duan hod (Mastanodes und Darksend) ausmaha (0-1, kört 0)</translation>
+        <source>Disable all Masternode and Freedomsend related functionality (0-1, default: 0)</source>
+        <translation>Ois was mid die Kapuzzn zum duan hod (Mastanodes und Freedomsend) ausmaha (0-1, kört 0)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="51"/>
@@ -4003,7 +4003,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="54"/>
-        <source>Enable use of automated darksend for funds stored in this wallet (0-1, default: 0)</source>
+        <source>Enable use of automated freedomsend for funds stored in this wallet (0-1, default: 0)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4103,7 +4103,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="110"/>
-        <source>Provide liquidity to Darksend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
+        <source>Provide liquidity to Freedomsend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4148,17 +4148,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="136"/>
-        <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
+        <source>Unable to locate enough Freedomsend denominated funds for this transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="138"/>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 DASH.</source>
+        <source>Unable to locate enough Freedomsend non-denominated funds for this transaction that are not equal 1000 DASH.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="141"/>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction.</source>
+        <source>Unable to locate enough Freedomsend non-denominated funds for this transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4355,13 +4355,13 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="202"/>
-        <source>Darksend is disabled.</source>
-        <translation>Darksend is aus.</translation>
+        <source>Freedomsend is disabled.</source>
+        <translation>Freedomsend is aus.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="203"/>
-        <source>Darksend options:</source>
-        <translation>Darksend Optschns:</translation>
+        <source>Freedomsend options:</source>
+        <translation>Freedomsend Optschns:</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="204"/>
@@ -4475,7 +4475,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="226"/>
-        <source>Error: You already have pending entries in the Darksend pool</source>
+        <source>Error: You already have pending entries in the Freedomsend pool</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4705,12 +4705,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="272"/>
-        <source>Last Darksend was too recent.</source>
+        <source>Last Freedomsend was too recent.</source>
         <translation>Au Kapuzzn-Kinda brauchn mal a Pausn. Machda a Bia auf...</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="273"/>
-        <source>Last successful darksend action was too recent.</source>
+        <source>Last successful freedomsend action was too recent.</source>
         <translation>Im Kapuzzngardn is grad Rauchapausn.</translation>
     </message>
     <message>
@@ -5215,7 +5215,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="374"/>
-        <source>Value more than Darksend pool maximum allows.</source>
+        <source>Value more than Freedomsend pool maximum allows.</source>
         <translation>Soi fui kansch ned auf aimal zum Kapuzznma´ha schickn... Schick weniga.</translation>
     </message>
     <message>

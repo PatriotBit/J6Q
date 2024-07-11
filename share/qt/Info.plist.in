@@ -40,7 +40,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.patriotbit.DarkcoinPayment</string>
+      <string>io.patriotbit.PatriotBitPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>patriotbit</string>

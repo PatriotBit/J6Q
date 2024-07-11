@@ -877,7 +877,7 @@ Address: %4
     </message>
     <message>
         <location filename="../forms/coincontroldialog.ui" line="461"/>
-        <source>Darksend Rounds</source>
+        <source>Freedomsend Rounds</source>
         <translation>匿名发送 循环次数</translation>
     </message>
     <message>
@@ -1108,87 +1108,87 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>DarksendConfig</name>
+    <name>FreedomsendConfig</name>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="14"/>
-        <source>Configure Darksend</source>
+        <location filename="../forms/freedomsendconfig.ui" line="14"/>
+        <source>Configure Freedomsend</source>
         <translation>配置匿名发送</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="26"/>
+        <location filename="../forms/freedomsendconfig.ui" line="26"/>
         <source>Basic Privacy</source>
         <translation>基本隐私</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="39"/>
+        <location filename="../forms/freedomsendconfig.ui" line="39"/>
         <source>High Privacy</source>
         <translation>高度隐私</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="52"/>
+        <location filename="../forms/freedomsendconfig.ui" line="52"/>
         <source>Maximum Privacy</source>
         <translation>最大隐私</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="65"/>
+        <location filename="../forms/freedomsendconfig.ui" line="65"/>
         <source>Please select a privacy level.</source>
         <translation>请选择隐私等级。</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="78"/>
+        <location filename="../forms/freedomsendconfig.ui" line="78"/>
         <source>Use 2 separate masternodes to mix funds up to 1000 DASH</source>
         <translation>使用2个独立的主节点混合资金最多1000达世币</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="91"/>
+        <location filename="../forms/freedomsendconfig.ui" line="91"/>
         <source>Use 8 separate masternodes to mix funds up to 1000 DASH</source>
         <translation>使用8个独立的主节点混合资金最多1000达世币</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="104"/>
+        <location filename="../forms/freedomsendconfig.ui" line="104"/>
         <source>Use 16 separate masternodes</source>
         <translation>使用16个独立主节点</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="117"/>
+        <location filename="../forms/freedomsendconfig.ui" line="117"/>
         <source>This option is the quickest and will cost about ~0.025 DASH to anonymize 1000 DASH</source>
         <translation>此选项为最快速度，需要支付0.025达世币/1000达世币的匿名处理费用。</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="130"/>
+        <location filename="../forms/freedomsendconfig.ui" line="130"/>
         <source>This option is moderately fast and will cost about 0.05 DASH to anonymize 1000 DASH</source>
         <translation>此选项为一般速度，需要支付0.05达世币/1000达世币的匿名处理费用。</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="156"/>
+        <location filename="../forms/freedomsendconfig.ui" line="156"/>
         <source>0.1 DASH per 1000 DASH you anonymize.</source>
         <translation>0.1达世币/1000达世币的匿名处理费用。</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="143"/>
+        <location filename="../forms/freedomsendconfig.ui" line="143"/>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>此选项提供最慢速度但是却最安全的匿名服务。最多匿名化将花费</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="43"/>
-        <location filename="../darksendconfig.cpp" line="58"/>
-        <location filename="../darksendconfig.cpp" line="73"/>
-        <source>Darksend Configuration</source>
+        <location filename="../freedomsendconfig.cpp" line="43"/>
+        <location filename="../freedomsendconfig.cpp" line="58"/>
+        <location filename="../freedomsendconfig.cpp" line="73"/>
+        <source>Freedomsend Configuration</source>
         <translation>匿名发送配置</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="44"/>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <location filename="../freedomsendconfig.cpp" line="44"/>
+        <source>Freedomsend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
         <translation>匿名发送已成功设置为一般(%1到2次循环)。可以通过打开达世币配置窗口来随时修改。</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="59"/>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <location filename="../freedomsendconfig.cpp" line="59"/>
+        <source>Freedomsend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
         <translation>匿名发送已成功设置为高(%1到8次循环)。可以通过打开达世币配置窗口来随时修改。</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="74"/>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <location filename="../freedomsendconfig.cpp" line="74"/>
+        <source>Freedomsend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
         <translation>匿名发送已成功设置为最高(%1到16次循环)。可以通过打开达世币配置窗口来随时修改。</translation>
     </message>
 </context>
@@ -1482,12 +1482,12 @@ Address: %4
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="141"/>
-        <source>Darksend rounds to use</source>
+        <source>Freedomsend rounds to use</source>
         <translation>匿名传送的循环次数</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="165"/>
-        <source>This amount acts as a threshold to turn off Darksend once it&apos;s reached.</source>
+        <source>This amount acts as a threshold to turn off Freedomsend once it&apos;s reached.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1806,7 +1806,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="336"/>
-        <source>Darksend Balance:</source>
+        <source>Freedomsend Balance:</source>
         <translation>匿名传送余额:</translation>
     </message>
     <message>
@@ -1844,7 +1844,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <location filename="../overviewpage.cpp" line="453"/>
         <location filename="../overviewpage.cpp" line="467"/>
         <location filename="../overviewpage.cpp" line="481"/>
-        <source>Darksend</source>
+        <source>Freedomsend</source>
         <translation>匿名发送</translation>
     </message>
     <message>
@@ -1859,7 +1859,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="896"/>
-        <source>Try to manually submit a Darksend request.</source>
+        <source>Try to manually submit a Freedomsend request.</source>
         <translation>尝试手动提交一次匿名化请求</translation>
     </message>
     <message>
@@ -1869,7 +1869,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="918"/>
-        <source>Reset the current status of Darksend (can interrupt Darksend if it&apos;s in the process of Mixing, which can cost you money!)</source>
+        <source>Reset the current status of Freedomsend (can interrupt Freedomsend if it&apos;s in the process of Mixing, which can cost you money!)</source>
         <translation>重置目前匿名状态(此操作可能会影响您目前正在执行的混合过程，并且产生费用!)</translation>
     </message>
     <message>
@@ -1899,13 +1899,13 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <location filename="../overviewpage.cpp" line="146"/>
         <location filename="../overviewpage.cpp" line="352"/>
         <location filename="../overviewpage.cpp" line="495"/>
-        <source>Start Darksend Mixing</source>
+        <source>Start Freedomsend Mixing</source>
         <translation>开始匿名化混合</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="148"/>
         <location filename="../overviewpage.cpp" line="497"/>
-        <source>Stop Darksend Mixing</source>
+        <source>Stop Freedomsend Mixing</source>
         <translation>关闭匿名化混合</translation>
     </message>
     <message>
@@ -1930,7 +1930,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="424"/>
-        <source>Last Darksend message:
+        <source>Last Freedomsend message:
 </source>
         <translation>最后一次匿名信息:
 </translation>
@@ -1938,7 +1938,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     <message>
         <location filename="../overviewpage.cpp" line="377"/>
         <location filename="../overviewpage.cpp" line="406"/>
-        <source>Darksend is idle.</source>
+        <source>Freedomsend is idle.</source>
         <translation>匿名化处于空闲状态</translation>
     </message>
     <message>
@@ -1948,7 +1948,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="387"/>
-        <source>Darksend request complete: Your transaction was accepted into the pool!</source>
+        <source>Freedomsend request complete: Your transaction was accepted into the pool!</source>
         <translation>匿名化请求已完成: 您的交易成功被匿名池接受</translation>
     </message>
     <message>
@@ -1995,7 +1995,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="410"/>
-        <source>Darksend request incomplete:</source>
+        <source>Freedomsend request incomplete:</source>
         <translation>匿名化请求未完成:</translation>
     </message>
     <message>
@@ -2005,7 +2005,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="412"/>
-        <source>Darksend request complete:</source>
+        <source>Freedomsend request complete:</source>
         <translation>匿名化请求已完成:</translation>
     </message>
     <message>
@@ -2035,17 +2035,17 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="454"/>
-        <source>Darksend was successfully reset.</source>
+        <source>Freedomsend was successfully reset.</source>
         <translation>匿名化被成功重置。</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="468"/>
-        <source>Darksend requires at least %1 to use.</source>
+        <source>Freedomsend requires at least %1 to use.</source>
         <translation>匿名化要求至少 1% 以使用</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="482"/>
-        <source>Wallet is locked and user declined to unlock. Disabling Darksend.</source>
+        <source>Wallet is locked and user declined to unlock. Disabling Freedomsend.</source>
         <translation>钱包已锁定需要用户解锁。 正在关闭匿名化。</translation>
     </message>
 </context>
@@ -2736,7 +2736,7 @@ XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="752"/>
-        <source>Darksend</source>
+        <source>Freedomsend</source>
         <translation>匿名发送</translation>
     </message>
     <message>
@@ -2804,7 +2804,7 @@ XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="155"/>
-        <source>(darksend requires this amount to be rounded up to the nearest %1).</source>
+        <source>(freedomsend requires this amount to be rounded up to the nearest %1).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3578,7 +3578,7 @@ XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="358"/>
-        <source>Received via Darksend</source>
+        <source>Received via Freedomsend</source>
         <translation>已通过匿名处理接收</translation>
     </message>
     <message>
@@ -3598,27 +3598,27 @@ XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="368"/>
-        <source>Darksend Denominate</source>
+        <source>Freedomsend Denominate</source>
         <translation>匿名发送面额化</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="370"/>
-        <source>Darksend Collateral Payment</source>
+        <source>Freedomsend Collateral Payment</source>
         <translation>匿名发送附加费用</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="372"/>
-        <source>Darksend Make Collateral Inputs</source>
+        <source>Freedomsend Make Collateral Inputs</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="374"/>
-        <source>Darksend Create Denominations</source>
+        <source>Freedomsend Create Denominations</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="376"/>
-        <source>Darksent</source>
+        <source>Freedomsent</source>
         <translation>匿名发送</translation>
     </message>
     <message>
@@ -3702,27 +3702,27 @@ XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="81"/>
-        <source>Darksent</source>
+        <source>Freedomsent</source>
         <translation>匿名发送</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="82"/>
-        <source>Darksend Make Collateral Inputs</source>
+        <source>Freedomsend Make Collateral Inputs</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="83"/>
-        <source>Darksend Create Denominations</source>
+        <source>Freedomsend Create Denominations</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="84"/>
-        <source>Darksend Denominate</source>
+        <source>Freedomsend Denominate</source>
         <translation>匿名发送面额化</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="85"/>
-        <source>Darksend Collateral Payment</source>
+        <source>Freedomsend Collateral Payment</source>
         <translation>匿名发送附加费用</translation>
     </message>
     <message>
@@ -3970,12 +3970,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="46"/>
-        <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
+        <source>Freedomsend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="49"/>
-        <source>Disable all Masternode and Darksend related functionality (0-1, default: 0)</source>
+        <source>Disable all Masternode and Freedomsend related functionality (0-1, default: 0)</source>
         <translation>禁止所有主节点和与匿名发送相关功能(0-1,默认：0)</translation>
     </message>
     <message>
@@ -3985,7 +3985,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="54"/>
-        <source>Enable use of automated darksend for funds stored in this wallet (0-1, default: 0)</source>
+        <source>Enable use of automated freedomsend for funds stored in this wallet (0-1, default: 0)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4085,7 +4085,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="110"/>
-        <source>Provide liquidity to Darksend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
+        <source>Provide liquidity to Freedomsend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4130,17 +4130,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="136"/>
-        <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
+        <source>Unable to locate enough Freedomsend denominated funds for this transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="138"/>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 DASH.</source>
+        <source>Unable to locate enough Freedomsend non-denominated funds for this transaction that are not equal 1000 DASH.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="141"/>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction.</source>
+        <source>Unable to locate enough Freedomsend non-denominated funds for this transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4337,12 +4337,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="202"/>
-        <source>Darksend is disabled.</source>
+        <source>Freedomsend is disabled.</source>
         <translation>匿名发送未激活。</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="203"/>
-        <source>Darksend options:</source>
+        <source>Freedomsend options:</source>
         <translation>匿名发送选项：</translation>
     </message>
     <message>
@@ -4457,7 +4457,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="226"/>
-        <source>Error: You already have pending entries in the Darksend pool</source>
+        <source>Error: You already have pending entries in the Freedomsend pool</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4687,12 +4687,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="272"/>
-        <source>Last Darksend was too recent.</source>
+        <source>Last Freedomsend was too recent.</source>
         <translation>最后一次匿名发送刚刚完成。</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="273"/>
-        <source>Last successful darksend action was too recent.</source>
+        <source>Last successful freedomsend action was too recent.</source>
         <translation>最后一次成功匿名发送刚刚完成。</translation>
     </message>
     <message>
@@ -5197,7 +5197,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="374"/>
-        <source>Value more than Darksend pool maximum allows.</source>
+        <source>Value more than Freedomsend pool maximum allows.</source>
         <translation>数值超过匿名发送池所允许的最大数。</translation>
     </message>
     <message>

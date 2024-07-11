@@ -13,7 +13,7 @@
 #include "checkqueue.h"
 #include "init.h"
 #include "instantx.h"
-#include "darksend.h"
+#include "freedomsend.h"
 #include "masternodeman.h"
 #include "net.h"
 #include "txdb.h"
@@ -82,7 +82,7 @@ void EraseOrphansFor(NodeId peer);
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "DarkCoin Signed Message:\n";
+const string strMessageMagic = "PatriotBit Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -3291,7 +3291,7 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
 
     if(!fLiteMode){
         if (!fImporting && !fReindex && chainActive.Height() > Checkpoints::GetTotalBlocksEstimate()){
-            darkSendPool.NewBlock();
+            freedomSendPool.NewBlock();
             masternodePayments.ProcessBlock(GetHeight()+10);
             mnscan.DoMasternodePOSChecks();
         }
@@ -4059,14 +4059,14 @@ void static ProcessGetData(CNode* pfrom)
 
                 if (!pushed && inv.type == MSG_TX) {
 
-                    if(mapDarksendBroadcastTxes.count(inv.hash)){
+                    if(mapFreedomsendBroadcastTxes.count(inv.hash)){
                         CDataStream ss(SER_NETWORK, PROTOCOL_VERSION);
                         ss.reserve(1000);
                         ss <<
-                            mapDarksendBroadcastTxes[inv.hash].tx <<
-                            mapDarksendBroadcastTxes[inv.hash].vin <<
-                            mapDarksendBroadcastTxes[inv.hash].vchSig <<
-                            mapDarksendBroadcastTxes[inv.hash].sigTime;
+                            mapFreedomsendBroadcastTxes[inv.hash].tx <<
+                            mapFreedomsendBroadcastTxes[inv.hash].vin <<
+                            mapFreedomsendBroadcastTxes[inv.hash].vchSig <<
+                            mapFreedomsendBroadcastTxes[inv.hash].sigTime;
 
                         pfrom->PushMessage("dstx", ss);
                         pushed = true;
@@ -4527,7 +4527,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
                 std::string strMessage = tx.GetHash().ToString() + boost::lexical_cast<std::string>(sigTime);
 
                 std::string errorMessage = "";
-                if(!darkSendSigner.VerifyMessage(pmn->pubkey2, vchSig, strMessage, errorMessage)){
+                if(!freedomSendSigner.VerifyMessage(pmn->pubkey2, vchSig, strMessage, errorMessage)){
                     LogPrintf("dstx: Got bad masternode address signature %s \n", vin.ToString().c_str());
                     //pfrom->Misbehaving(20);
                     return false;
@@ -4538,14 +4538,14 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
                 allowFree = true;
                 pmn->allowFreeTx = false;
 
-                if(!mapDarksendBroadcastTxes.count(tx.GetHash())){
-                    CDarksendBroadcastTx dstx;
+                if(!mapFreedomsendBroadcastTxes.count(tx.GetHash())){
+                    CFreedomsendBroadcastTx dstx;
                     dstx.tx = tx;
                     dstx.vin = vin;
                     dstx.vchSig = vchSig;
                     dstx.sigTime = sigTime;
 
-                    mapDarksendBroadcastTxes.insert(make_pair(tx.GetHash(), dstx));
+                    mapFreedomsendBroadcastTxes.insert(make_pair(tx.GetHash(), dstx));
                 }
             }
         }
@@ -4882,7 +4882,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
     else
     {
         //probably one the extensions
-        darkSendPool.ProcessMessageDarksend(pfrom, strCommand, vRecv);
+        freedomSendPool.ProcessMessageFreedomsend(pfrom, strCommand, vRecv);
         mnodeman.ProcessMessage(pfrom, strCommand, vRecv);
         ProcessMessageMasternodePayments(pfrom, strCommand, vRecv);
         ProcessMessageInstantX(pfrom, strCommand, vRecv);

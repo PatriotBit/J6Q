@@ -99,17 +99,17 @@ string strMasterNodePrivKey = "";
 string strMasterNodeAddr = "";
 bool fLiteMode = false;
 int nInstantXDepth = 1;
-int nDarksendRounds = 2;
-int nAnonymizeDarkcoinAmount = 1000;
+int nFreedomsendRounds = 2;
+int nAnonymizePatriotBitAmount = 1000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
 //int64_t enforceMasternodePaymentsTime = 4085657524; // PatriotBit
 int64_t enforceMasternodePaymentsTime = 9085657524;
 int nMasternodeMinProtocol = 0;
 bool fSucessfullyLoaded = false;
-bool fEnableDarksend = false;
-/** All denominations used by darksend */
-std::vector<int64_t> darkSendDenominations;
+bool fEnableFreedomsend = false;
+/** All denominations used by freedomsend */
+std::vector<int64_t> freedomSendDenominations;
 
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;

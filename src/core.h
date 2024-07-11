@@ -17,8 +17,8 @@
 #define START_MASTERNODE_PAYMENTS_TESTNET 1437436800 // 21 Jul 2015
 #define START_MASTERNODE_PAYMENTS 1437436800 // 21 Jul 2015
 
-static const int64_t DARKSEND_COLLATERAL = (0.01*COIN);
-static const int64_t DARKSEND_POOL_MAX = (999.99*COIN);
+static const int64_t FREEDOMSEND_COLLATERAL = (0.01*COIN);
+static const int64_t FREEDOMSEND_POOL_MAX = (999.99*COIN);
 
 /*
     At 15 signatures, 1/2 of the masternode network can be owned by
@@ -45,7 +45,7 @@ static const int64_t DARKSEND_POOL_MAX = (999.99*COIN);
 #define MASTERNODE_EXPIRATION_SECONDS          (65*60)
 #define MASTERNODE_REMOVAL_SECONDS             (70*60)
 
-static const int MIN_POOL_PEER_PROTO_VERSION = 90000; // minimum peer version accepted by DarkSendPool
+static const int MIN_POOL_PEER_PROTO_VERSION = 90000; // minimum peer version accepted by FreedomSendPool
 
 class CTransaction;
 

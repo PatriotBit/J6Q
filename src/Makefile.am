@@ -40,8 +40,8 @@ BITCOIN_CORE_H = \
   compat.h \
   core.h \
   crypter.h \
-  darksend.h \
-  darksend-relay.h \
+  freedomsend.h \
+  freedomsend-relay.h \
   db.h \
   hash.h \
   init.h \
@@ -124,7 +124,7 @@ libpatriotbit_server_a_SOURCES = \
   net.cpp \
   noui.cpp \
   rpcblockchain.cpp \
-  rpcdarksend.cpp \
+  rpcfreedomsend.cpp \
   rpcmining.cpp \
   rpcmisc.cpp \
   rpcnet.cpp \
@@ -152,8 +152,8 @@ libpatriotbit_common_a_SOURCES = \
   allocators.cpp \
   chainparams.cpp \
   core.cpp \
-  darksend.cpp \
-  darksend-relay.cpp \
+  freedomsend.cpp \
+  freedomsend-relay.cpp \
   masternode.cpp \
   masternode-pos.cpp \
   masternodeman.cpp \

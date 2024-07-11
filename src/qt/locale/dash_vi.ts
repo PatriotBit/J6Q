@@ -877,8 +877,8 @@ Kiểu: %3
     </message>
     <message>
         <location filename="../forms/coincontroldialog.ui" line="461"/>
-        <source>Darksend Rounds</source>
-        <translation>Số vòng Darksend</translation>
+        <source>Freedomsend Rounds</source>
+        <translation>Số vòng Freedomsend</translation>
     </message>
     <message>
         <location filename="../forms/coincontroldialog.ui" line="466"/>
@@ -1108,88 +1108,88 @@ Kiểu: %3
     </message>
 </context>
 <context>
-    <name>DarksendConfig</name>
+    <name>FreedomsendConfig</name>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="14"/>
-        <source>Configure Darksend</source>
-        <translation>Cấu hình Darksend</translation>
+        <location filename="../forms/freedomsendconfig.ui" line="14"/>
+        <source>Configure Freedomsend</source>
+        <translation>Cấu hình Freedomsend</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="26"/>
+        <location filename="../forms/freedomsendconfig.ui" line="26"/>
         <source>Basic Privacy</source>
         <translation>Mức Riêng tư Cơ bản</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="39"/>
+        <location filename="../forms/freedomsendconfig.ui" line="39"/>
         <source>High Privacy</source>
         <translation>Mức Riêng tư Cao</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="52"/>
+        <location filename="../forms/freedomsendconfig.ui" line="52"/>
         <source>Maximum Privacy</source>
         <translation>Mức Riêng tư Tối đa</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="65"/>
+        <location filename="../forms/freedomsendconfig.ui" line="65"/>
         <source>Please select a privacy level.</source>
         <translation>Hãy chọn mức độ riêng tư.</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="78"/>
+        <location filename="../forms/freedomsendconfig.ui" line="78"/>
         <source>Use 2 separate masternodes to mix funds up to 1000 DASH</source>
         <translation>Sử dụng 2 masternode khác nhau để trộn số tiền lên đến 1000 DASH</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="91"/>
+        <location filename="../forms/freedomsendconfig.ui" line="91"/>
         <source>Use 8 separate masternodes to mix funds up to 1000 DASH</source>
         <translation>Sử dụng 8 masternode khác nhau để trộn số tiền lên đến 1000 DASH</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="104"/>
+        <location filename="../forms/freedomsendconfig.ui" line="104"/>
         <source>Use 16 separate masternodes</source>
         <translation>Sử dụng 16 masternode khác nhau</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="117"/>
+        <location filename="../forms/freedomsendconfig.ui" line="117"/>
         <source>This option is the quickest and will cost about ~0.025 DASH to anonymize 1000 DASH</source>
         <translation>Tuỳ chọn này là nhanh nhất và sẽ mất chi phí khoảng ~0.025 DASH để ẩn danh 1000 DASH</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="130"/>
+        <location filename="../forms/freedomsendconfig.ui" line="130"/>
         <source>This option is moderately fast and will cost about 0.05 DASH to anonymize 1000 DASH</source>
         <translation>Tuỳ chọn này là tương đối nhanh và sẽ mất chi phí khoảng ~0.05 DASH để ẩn danh 1000 DASH</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="156"/>
+        <location filename="../forms/freedomsendconfig.ui" line="156"/>
         <source>0.1 DASH per 1000 DASH you anonymize.</source>
         <translation>0.1 DASH cho mỗi 1000 DASH bạn muốn ẩn danh.</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="143"/>
+        <location filename="../forms/freedomsendconfig.ui" line="143"/>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Đây là tuỳ chọn chậm nhất và an toàn nhất. Sử dụng mức vô danh cao nhất sẽ tốn kém</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="43"/>
-        <location filename="../darksendconfig.cpp" line="58"/>
-        <location filename="../darksendconfig.cpp" line="73"/>
-        <source>Darksend Configuration</source>
-        <translation>Cấu hình Darksend</translation>
+        <location filename="../freedomsendconfig.cpp" line="43"/>
+        <location filename="../freedomsendconfig.cpp" line="58"/>
+        <location filename="../freedomsendconfig.cpp" line="73"/>
+        <source>Freedomsend Configuration</source>
+        <translation>Cấu hình Freedomsend</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="44"/>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
-        <translation>Darksend được thiết lập thành công về mức cơ bản (%1 và 2 vòng). Bạn có thể thay đổi nó bất cứ thời gian nào bằng cách mở màn hình cấu hình Chaincoin.</translation>
+        <location filename="../freedomsendconfig.cpp" line="44"/>
+        <source>Freedomsend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <translation>Freedomsend được thiết lập thành công về mức cơ bản (%1 và 2 vòng). Bạn có thể thay đổi nó bất cứ thời gian nào bằng cách mở màn hình cấu hình Chaincoin.</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="59"/>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
-        <translation>Darksend được thiết lập thành công về mức cao (%1 và 8 vòng). Bạn có thể thay đổi nó bất cứ thời gian nào bằng cách mở màn hình cấu hình Chaincoin.</translation>
+        <location filename="../freedomsendconfig.cpp" line="59"/>
+        <source>Freedomsend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <translation>Freedomsend được thiết lập thành công về mức cao (%1 và 8 vòng). Bạn có thể thay đổi nó bất cứ thời gian nào bằng cách mở màn hình cấu hình Chaincoin.</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="74"/>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
-        <translation>Darksend được thiết lập thành công về mức tối đa (%1 và 16 vòng). Bạn có thể thay đổi nó bất cứ thời gian nào bằng cách mở màn hình cấu hình Chaincoin.</translation>
+        <location filename="../freedomsendconfig.cpp" line="74"/>
+        <source>Freedomsend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <translation>Freedomsend được thiết lập thành công về mức tối đa (%1 và 16 vòng). Bạn có thể thay đổi nó bất cứ thời gian nào bằng cách mở màn hình cấu hình Chaincoin.</translation>
     </message>
 </context>
 <context>
@@ -1481,13 +1481,13 @@ Kiểu: %3
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="141"/>
-        <source>Darksend rounds to use</source>
-        <translation>Số vòng Darksend sử dụng</translation>
+        <source>Freedomsend rounds to use</source>
+        <translation>Số vòng Freedomsend sử dụng</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="165"/>
-        <source>This amount acts as a threshold to turn off Darksend once it&apos;s reached.</source>
-        <translation>Số lượng này hoạt động như là một ngưỡng để tắt Darksend một khi nó đạt đến.</translation>
+        <source>This amount acts as a threshold to turn off Freedomsend once it&apos;s reached.</source>
+        <translation>Số lượng này hoạt động như là một ngưỡng để tắt Freedomsend một khi nó đạt đến.</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="180"/>
@@ -1805,8 +1805,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="336"/>
-        <source>Darksend Balance:</source>
-        <translation>Số dư cho Darksend:</translation>
+        <source>Freedomsend Balance:</source>
+        <translation>Số dư cho Freedomsend:</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="349"/>
@@ -1843,8 +1843,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <location filename="../overviewpage.cpp" line="453"/>
         <location filename="../overviewpage.cpp" line="467"/>
         <location filename="../overviewpage.cpp" line="481"/>
-        <source>Darksend</source>
-        <translation>Darksend</translation>
+        <source>Freedomsend</source>
+        <translation>Freedomsend</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="839"/>
@@ -1858,8 +1858,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="896"/>
-        <source>Try to manually submit a Darksend request.</source>
-        <translation>Thử gửi yêu cầu Darksend bằng tay.</translation>
+        <source>Try to manually submit a Freedomsend request.</source>
+        <translation>Thử gửi yêu cầu Freedomsend bằng tay.</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="899"/>
@@ -1868,8 +1868,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="918"/>
-        <source>Reset the current status of Darksend (can interrupt Darksend if it&apos;s in the process of Mixing, which can cost you money!)</source>
-        <translation>Tái lập lại trạng thái hiện tại của Darksend (có thể gián đoạn Darksend nếu nó đang trong quá trình trộn, điều đó có thể làm bạn bị mất tiền!)</translation>
+        <source>Reset the current status of Freedomsend (can interrupt Freedomsend if it&apos;s in the process of Mixing, which can cost you money!)</source>
+        <translation>Tái lập lại trạng thái hiện tại của Freedomsend (có thể gián đoạn Freedomsend nếu nó đang trong quá trình trộn, điều đó có thể làm bạn bị mất tiền!)</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="924"/>
@@ -1898,14 +1898,14 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <location filename="../overviewpage.cpp" line="146"/>
         <location filename="../overviewpage.cpp" line="352"/>
         <location filename="../overviewpage.cpp" line="495"/>
-        <source>Start Darksend Mixing</source>
-        <translation>Bắt đầu trộn Darksend</translation>
+        <source>Start Freedomsend Mixing</source>
+        <translation>Bắt đầu trộn Freedomsend</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="148"/>
         <location filename="../overviewpage.cpp" line="497"/>
-        <source>Stop Darksend Mixing</source>
-        <translation>Tắt trộn Darksend</translation>
+        <source>Stop Freedomsend Mixing</source>
+        <translation>Tắt trộn Freedomsend</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="270"/>
@@ -1929,16 +1929,16 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="424"/>
-        <source>Last Darksend message:
+        <source>Last Freedomsend message:
 </source>
-        <translation>Thông điệp Darksend cuối cùng:
+        <translation>Thông điệp Freedomsend cuối cùng:
 </translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="377"/>
         <location filename="../overviewpage.cpp" line="406"/>
-        <source>Darksend is idle.</source>
-        <translation>Darksend đang nghỉ.</translation>
+        <source>Freedomsend is idle.</source>
+        <translation>Freedomsend đang nghỉ.</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="381"/>
@@ -1947,8 +1947,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="387"/>
-        <source>Darksend request complete: Your transaction was accepted into the pool!</source>
-        <translation>Yêu cầu Darksend đã hoàn tất:  Giao dịch của bạn đã được chấp nhận vào bể trộn!</translation>
+        <source>Freedomsend request complete: Your transaction was accepted into the pool!</source>
+        <translation>Yêu cầu Freedomsend đã hoàn tất:  Giao dịch của bạn đã được chấp nhận vào bể trộn!</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="393"/>
@@ -1994,8 +1994,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="410"/>
-        <source>Darksend request incomplete:</source>
-        <translation>Yêu cầu Darksend chưa hoàn thành:</translation>
+        <source>Freedomsend request incomplete:</source>
+        <translation>Yêu cầu Freedomsend chưa hoàn thành:</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="410"/>
@@ -2004,8 +2004,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="412"/>
-        <source>Darksend request complete:</source>
-        <translation>Yêu cầu Darksend hoàn thành:</translation>
+        <source>Freedomsend request complete:</source>
+        <translation>Yêu cầu Freedomsend hoàn thành:</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="414"/>
@@ -2034,18 +2034,18 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="454"/>
-        <source>Darksend was successfully reset.</source>
-        <translation>Darksend vừa được tái lập thành công.</translation>
+        <source>Freedomsend was successfully reset.</source>
+        <translation>Freedomsend vừa được tái lập thành công.</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="468"/>
-        <source>Darksend requires at least %1 to use.</source>
-        <translation>Darksend cần ít nhất %1 để sử dụng.</translation>
+        <source>Freedomsend requires at least %1 to use.</source>
+        <translation>Freedomsend cần ít nhất %1 để sử dụng.</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="482"/>
-        <source>Wallet is locked and user declined to unlock. Disabling Darksend.</source>
-        <translation>Ví đã được khoá và người dùng từ chối mở khoá. Đang tắt Darksend.</translation>
+        <source>Wallet is locked and user declined to unlock. Disabling Freedomsend.</source>
+        <translation>Ví đã được khoá và người dùng từ chối mở khoá. Đang tắt Freedomsend.</translation>
     </message>
 </context>
 <context>
@@ -2734,8 +2734,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="752"/>
-        <source>Darksend</source>
-        <translation>Darksend</translation>
+        <source>Freedomsend</source>
+        <translation>Freedomsend</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="771"/>
@@ -2802,8 +2802,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="155"/>
-        <source>(darksend requires this amount to be rounded up to the nearest %1).</source>
-        <translation>(darksend yêu cầu số tiền này sẽ được làm tròn đến gần %1)</translation>
+        <source>(freedomsend requires this amount to be rounded up to the nearest %1).</source>
+        <translation>(freedomsend yêu cầu số tiền này sẽ được làm tròn đến gần %1)</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="160"/>
@@ -3575,8 +3575,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="358"/>
-        <source>Received via Darksend</source>
-        <translation>Nhận qua Darksend</translation>
+        <source>Received via Freedomsend</source>
+        <translation>Nhận qua Freedomsend</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="361"/>
@@ -3595,28 +3595,28 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="368"/>
-        <source>Darksend Denominate</source>
-        <translation>Darksend Denominate</translation>
+        <source>Freedomsend Denominate</source>
+        <translation>Freedomsend Denominate</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="370"/>
-        <source>Darksend Collateral Payment</source>
-        <translation>Thanh toán Darksend Collateral</translation>
+        <source>Freedomsend Collateral Payment</source>
+        <translation>Thanh toán Freedomsend Collateral</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="372"/>
-        <source>Darksend Make Collateral Inputs</source>
-        <translation>Darksend tạo đầu vào Collateral</translation>
+        <source>Freedomsend Make Collateral Inputs</source>
+        <translation>Freedomsend tạo đầu vào Collateral</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="374"/>
-        <source>Darksend Create Denominations</source>
-        <translation>Darksend tạo các mệnh giá</translation>
+        <source>Freedomsend Create Denominations</source>
+        <translation>Freedomsend tạo các mệnh giá</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="376"/>
-        <source>Darksent</source>
-        <translation>Darksent</translation>
+        <source>Freedomsent</source>
+        <translation>Freedomsent</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="418"/>
@@ -3699,28 +3699,28 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="81"/>
-        <source>Darksent</source>
-        <translation>Darksent</translation>
+        <source>Freedomsent</source>
+        <translation>Freedomsent</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="82"/>
-        <source>Darksend Make Collateral Inputs</source>
-        <translation>Darksend tạo đầu vào Collateral</translation>
+        <source>Freedomsend Make Collateral Inputs</source>
+        <translation>Freedomsend tạo đầu vào Collateral</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="83"/>
-        <source>Darksend Create Denominations</source>
-        <translation>Darksend tạo các mệnh giá</translation>
+        <source>Freedomsend Create Denominations</source>
+        <translation>Freedomsend tạo các mệnh giá</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="84"/>
-        <source>Darksend Denominate</source>
-        <translation>Darksend Denominate</translation>
+        <source>Freedomsend Denominate</source>
+        <translation>Freedomsend Denominate</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="85"/>
-        <source>Darksend Collateral Payment</source>
-        <translation>Thanh toán Darksend Collateral</translation>
+        <source>Freedomsend Collateral Payment</source>
+        <translation>Thanh toán Freedomsend Collateral</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="86"/>
@@ -3977,13 +3977,13 @@ ví dụ: alertnotify=echo %%s | mail -s &quot;Cảnh báo Chaincoin&quot; admin
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="46"/>
-        <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
-        <translation>Darksend sử dụng số lượng mệnh giá nhất định để gửi tiền, bạn có thể chỉ cần đơn giản ẩn danh vài coin nữa.</translation>
+        <source>Freedomsend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
+        <translation>Freedomsend sử dụng số lượng mệnh giá nhất định để gửi tiền, bạn có thể chỉ cần đơn giản ẩn danh vài coin nữa.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="49"/>
-        <source>Disable all Masternode and Darksend related functionality (0-1, default: 0)</source>
-        <translation>Tắt tất cả các chức năng liên quan đến Masternode và Darksend (0-1, ngầm định: 0)</translation>
+        <source>Disable all Masternode and Freedomsend related functionality (0-1, default: 0)</source>
+        <translation>Tắt tất cả các chức năng liên quan đến Masternode và Freedomsend (0-1, ngầm định: 0)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="51"/>
@@ -3992,8 +3992,8 @@ ví dụ: alertnotify=echo %%s | mail -s &quot;Cảnh báo Chaincoin&quot; admin
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="54"/>
-        <source>Enable use of automated darksend for funds stored in this wallet (0-1, default: 0)</source>
-        <translation>Cho phép sử dụng tự động darksend cho những ngân sách được lưu trong ví (0-1, ngầm định: 0)</translation>
+        <source>Enable use of automated freedomsend for funds stored in this wallet (0-1, default: 0)</source>
+        <translation>Cho phép sử dụng tự động freedomsend cho những ngân sách được lưu trong ví (0-1, ngầm định: 0)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="57"/>
@@ -4092,8 +4092,8 @@ ví dụ: alertnotify=echo %%s | mail -s &quot;Cảnh báo Chaincoin&quot; admin
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="110"/>
-        <source>Provide liquidity to Darksend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
-        <translation>Cung cấp thanh khoản cho Darksend bằng việc thường xuyên trộn tiền một cách liên tục (0-100, ngầm định: 0, 1=rất thường xuyên, phí cao, 100=rất ít thường xuyên, phí thấp)</translation>
+        <source>Provide liquidity to Freedomsend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
+        <translation>Cung cấp thanh khoản cho Freedomsend bằng việc thường xuyên trộn tiền một cách liên tục (0-100, ngầm định: 0, 1=rất thường xuyên, phí cao, 100=rất ít thường xuyên, phí thấp)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="114"/>
@@ -4137,18 +4137,18 @@ ví dụ: alertnotify=echo %%s | mail -s &quot;Cảnh báo Chaincoin&quot; admin
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="136"/>
-        <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
-        <translation>Không tìm đủ ngân sách Darksend denominated cho giao dịch này.</translation>
+        <source>Unable to locate enough Freedomsend denominated funds for this transaction.</source>
+        <translation>Không tìm đủ ngân sách Freedomsend denominated cho giao dịch này.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="138"/>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 DASH.</source>
-        <translation>Không tìm đủ ngân sách Darksend denominated cho giao dịch mà nó không bằng 1000 DASH</translation>
+        <source>Unable to locate enough Freedomsend non-denominated funds for this transaction that are not equal 1000 DASH.</source>
+        <translation>Không tìm đủ ngân sách Freedomsend denominated cho giao dịch mà nó không bằng 1000 DASH</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="141"/>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction.</source>
-        <translation>Không kiếm đủ ngân sách Darksend non-denominated cho giao dịch này.</translation>
+        <source>Unable to locate enough Freedomsend non-denominated funds for this transaction.</source>
+        <translation>Không kiếm đủ ngân sách Freedomsend non-denominated cho giao dịch này.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="143"/>
@@ -4346,13 +4346,13 @@ Nếu tệp không tồn tại, tạo nó với quyền tệp owner-readable-onl
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="202"/>
-        <source>Darksend is disabled.</source>
-        <translation>Darksend đã được tắt.</translation>
+        <source>Freedomsend is disabled.</source>
+        <translation>Freedomsend đã được tắt.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="203"/>
-        <source>Darksend options:</source>
-        <translation>Tuỳ chọn Darksend:</translation>
+        <source>Freedomsend options:</source>
+        <translation>Tuỳ chọn Freedomsend:</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="204"/>
@@ -4466,8 +4466,8 @@ Nếu tệp không tồn tại, tạo nó với quyền tệp owner-readable-onl
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="226"/>
-        <source>Error: You already have pending entries in the Darksend pool</source>
-        <translation>Lỗi: Bạn đã có các thành phần đang chờ trong Darksend pool</translation>
+        <source>Error: You already have pending entries in the Freedomsend pool</source>
+        <translation>Lỗi: Bạn đã có các thành phần đang chờ trong Freedomsend pool</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="227"/>
@@ -4696,13 +4696,13 @@ Nếu tệp không tồn tại, tạo nó với quyền tệp owner-readable-onl
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="272"/>
-        <source>Last Darksend was too recent.</source>
-        <translation>Darksend cuối cùng quá gần.</translation>
+        <source>Last Freedomsend was too recent.</source>
+        <translation>Freedomsend cuối cùng quá gần.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="273"/>
-        <source>Last successful darksend action was too recent.</source>
-        <translation>Darksend thành công cuối cùng quá gần.</translation>
+        <source>Last successful freedomsend action was too recent.</source>
+        <translation>Freedomsend thành công cuối cùng quá gần.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="274"/>
@@ -5206,8 +5206,8 @@ Nếu tệp không tồn tại, tạo nó với quyền tệp owner-readable-onl
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="374"/>
-        <source>Value more than Darksend pool maximum allows.</source>
-        <translation>Giá tri trị lớn hơn giá trị tối đa mà bể Darksend cho phép.</translation>
+        <source>Value more than Freedomsend pool maximum allows.</source>
+        <translation>Giá tri trị lớn hơn giá trị tối đa mà bể Freedomsend cho phép.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="375"/>

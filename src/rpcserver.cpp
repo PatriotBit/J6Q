@@ -276,7 +276,7 @@ static const CRPCCommand vRPCCommands[] =
     { "masternode",             &masternode,             true,      false,      true  },
     { "masternodelist",         &masternodelist,         true,      false,      false },
 #ifdef ENABLE_WALLET
-    { "darksend",               &darksend,               false,     false,      true  },
+    { "freedomsend",               &freedomsend,               false,     false,      true  },
 
     /* Wallet */
     { "addmultisigaddress",     &addmultisigaddress,     false,     false,      true },

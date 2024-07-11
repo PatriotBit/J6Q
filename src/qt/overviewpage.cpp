@@ -8,8 +8,8 @@
 
 #include "bitcoinunits.h"
 #include "clientmodel.h"
-#include "darksend.h"
-#include "darksendconfig.h"
+#include "freedomsend.h"
+#include "freedomsendconfig.h"
 #include "guiconstants.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
@@ -126,30 +126,30 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
     // init "out of sync" warning labels
     ui->labelWalletStatus->setText("(" + tr("out of sync") + ")");
-    ui->labelDarksendSyncStatus->setText("(" + tr("out of sync") + ")");
+    ui->labelFreedomsendSyncStatus->setText("(" + tr("out of sync") + ")");
     ui->labelTransactionsStatus->setText("(" + tr("out of sync") + ")");
 
-    showingDarkSendMessage = 0;
-    darksendActionCheck = 0;
+    showingFreedomSendMessage = 0;
+    freedomsendActionCheck = 0;
     lastNewBlock = 0;
 
     if(fLiteMode){
-        ui->frameDarksend->setVisible(false);
+        ui->frameFreedomsend->setVisible(false);
     } else if(!fMasterNode) {
         timer = new QTimer(this);
-        connect(timer, SIGNAL(timeout()), this, SLOT(darkSendStatus()));
+        connect(timer, SIGNAL(timeout()), this, SLOT(freedomSendStatus()));
         timer->start(333);
     }
 
     if(fMasterNode){
-        ui->toggleDarksend->setText("(" + tr("Disabled") + ")");
-        ui->darksendAuto->setText("(" + tr("Disabled") + ")");
-        ui->darksendReset->setText("(" + tr("Disabled") + ")");
-        ui->frameDarksend->setEnabled(false);
-    }else if(!fEnableDarksend){
-        ui->toggleDarksend->setText(tr("Go for FreedomSend"));
+        ui->toggleFreedomsend->setText("(" + tr("Disabled") + ")");
+        ui->freedomsendAuto->setText("(" + tr("Disabled") + ")");
+        ui->freedomsendReset->setText("(" + tr("Disabled") + ")");
+        ui->frameFreedomsend->setEnabled(false);
+    }else if(!fEnableFreedomsend){
+        ui->toggleFreedomsend->setText(tr("Go for FreedomSend"));
     } else {
-        ui->toggleDarksend->setText(tr("Cease FreedomSend"));
+        ui->toggleFreedomsend->setText(tr("Cease FreedomSend"));
     }
 
     // start with displaying the "out of sync" warnings
@@ -164,7 +164,7 @@ void OverviewPage::handleTransactionClicked(const QModelIndex &index)
 
 OverviewPage::~OverviewPage()
 {
-    if(!fLiteMode && !fMasterNode) disconnect(timer, SIGNAL(timeout()), this, SLOT(darkSendStatus()));
+    if(!fLiteMode && !fMasterNode) disconnect(timer, SIGNAL(timeout()), this, SLOT(freedomSendStatus()));
     delete ui;
 }
 
@@ -227,9 +227,9 @@ void OverviewPage::setWalletModel(WalletModel *model)
 
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
 
-        connect(ui->darksendAuto, SIGNAL(clicked()), this, SLOT(darksendAuto()));
-        connect(ui->darksendReset, SIGNAL(clicked()), this, SLOT(darksendReset()));
-        connect(ui->toggleDarksend, SIGNAL(clicked()), this, SLOT(toggleDarksend()));
+        connect(ui->freedomsendAuto, SIGNAL(clicked()), this, SLOT(freedomsendAuto()));
+        connect(ui->freedomsendReset, SIGNAL(clicked()), this, SLOT(freedomsendReset()));
+        connect(ui->toggleFreedomsend, SIGNAL(clicked()), this, SLOT(toggleFreedomsend()));
     }
 
     // update the display unit, to not use the default ("PatriotBit")
@@ -259,20 +259,20 @@ void OverviewPage::updateAlerts(const QString &warnings)
 void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
     ui->labelWalletStatus->setVisible(fShow);
-    ui->labelDarksendSyncStatus->setVisible(fShow);
+    ui->labelFreedomsendSyncStatus->setVisible(fShow);
     ui->labelTransactionsStatus->setVisible(fShow);
 }
 
-void OverviewPage::updateDarksendProgress()
+void OverviewPage::updateFreedomsendProgress()
 {
     if(IsInitialBlockDownload()) return;
 
     int64_t nBalance = pwalletMain->GetBalance();
     if(nBalance == 0)
     {
-        ui->darksendProgress->setValue(0);
+        ui->freedomsendProgress->setValue(0);
         QString s(tr("No inputs detected"));
-        ui->darksendProgress->setToolTip(s);
+        ui->freedomsendProgress->setToolTip(s);
         return;
     }
 
@@ -280,12 +280,12 @@ void OverviewPage::updateDarksendProgress()
     if(pwalletMain->GetDenominatedBalance(true, true) > 0)
     {
         QString s(tr("Found unconfirmed denominated outputs, will wait till they confirm to recalculate."));
-        ui->darksendProgress->setToolTip(s);
+        ui->freedomsendProgress->setToolTip(s);
         return;
     }
 
     //Get the anon threshold
-    int64_t nMaxToAnonymize = nAnonymizeDarkcoinAmount*COIN;
+    int64_t nMaxToAnonymize = nAnonymizePatriotBitAmount*COIN;
 
     // If it's more than the wallet amount, limit to that.
     if(nMaxToAnonymize > nBalance) nMaxToAnonymize = nBalance;
@@ -316,152 +316,152 @@ void OverviewPage::updateDarksendProgress()
     int progress = 80 * denomPart + 20 * anonPart;
     if(progress >= 100) progress = 100;
 
-    ui->darksendProgress->setValue(progress);
+    ui->freedomsendProgress->setValue(progress);
 
     std::ostringstream convert;
-    convert << "Progress: " << progress << "%, inputs have an average of " << pwalletMain->GetAverageAnonymizedRounds() << " of " << nDarksendRounds << " rounds";
+    convert << "Progress: " << progress << "%, inputs have an average of " << pwalletMain->GetAverageAnonymizedRounds() << " of " << nFreedomsendRounds << " rounds";
     QString s(convert.str().c_str());
-    ui->darksendProgress->setToolTip(s);
+    ui->freedomsendProgress->setToolTip(s);
 }
 
 
-void OverviewPage::darkSendStatus()
+void OverviewPage::freedomSendStatus()
 {
     int nBestHeight = chainActive.Tip()->nHeight;
 
-    if(nBestHeight != darkSendPool.cachedNumBlocks)
+    if(nBestHeight != freedomSendPool.cachedNumBlocks)
     {
         //we we're processing lots of blocks, we'll just leave
         if(GetTime() - lastNewBlock < 10) return;
         lastNewBlock = GetTime();
 
-        updateDarksendProgress();
+        updateFreedomsendProgress();
 
         QString strSettings(" " + tr("Rounds"));
-        strSettings.prepend(QString::number(nDarksendRounds)).prepend(" / ");
+        strSettings.prepend(QString::number(nFreedomsendRounds)).prepend(" / ");
         strSettings.prepend(BitcoinUnits::formatWithUnit(
             walletModel->getOptionsModel()->getDisplayUnit(),
-            nAnonymizeDarkcoinAmount * COIN)
+            nAnonymizePatriotBitAmount * COIN)
         );
 
         ui->labelAmountRounds->setText(strSettings);
     }
 
-    if(!fEnableDarksend) {
-        if(nBestHeight != darkSendPool.cachedNumBlocks)
+    if(!fEnableFreedomsend) {
+        if(nBestHeight != freedomSendPool.cachedNumBlocks)
         {
-            darkSendPool.cachedNumBlocks = nBestHeight;
+            freedomSendPool.cachedNumBlocks = nBestHeight;
 
-            ui->darksendEnabled->setText(tr("Disabled"));
-            ui->darksendStatus->setText("");
-            ui->toggleDarksend->setText(tr("Begin FreedomSend"));
+            ui->freedomsendEnabled->setText(tr("Disabled"));
+            ui->freedomsendStatus->setText("");
+            ui->toggleFreedomsend->setText(tr("Begin FreedomSend"));
         }
 
         return;
     }
 
-    // check darksend status and unlock if needed
-    if(nBestHeight != darkSendPool.cachedNumBlocks)
+    // check freedomsend status and unlock if needed
+    if(nBestHeight != freedomSendPool.cachedNumBlocks)
     {
         // Balance and number of transactions might have changed
-        darkSendPool.cachedNumBlocks = nBestHeight;
+        freedomSendPool.cachedNumBlocks = nBestHeight;
 
         /* *******************************************************/
 
-        ui->darksendEnabled->setText(tr("Enabled"));
+        ui->freedomsendEnabled->setText(tr("Enabled"));
     }
 
-    int state = darkSendPool.GetState();
-    int entries = darkSendPool.GetEntriesCount();
-    int accepted = darkSendPool.GetLastEntryAccepted();
+    int state = freedomSendPool.GetState();
+    int entries = freedomSendPool.GetEntriesCount();
+    int accepted = freedomSendPool.GetLastEntryAccepted();
 
     /* ** @TODO this string creation really needs some clean ups ---vertoe ** */
     std::ostringstream convert;
 
     if(state == POOL_STATUS_IDLE) {
-        convert << tr("Darksend is idle.").toStdString();
+        convert << tr("Freedomsend is idle.").toStdString();
     } else if(state == POOL_STATUS_ACCEPTING_ENTRIES) {
         if(entries == 0) {
-            if(darkSendPool.strAutoDenomResult.size() == 0){
+            if(freedomSendPool.strAutoDenomResult.size() == 0){
                 convert << tr("Mixing in progress...").toStdString();
             } else {
-                convert << darkSendPool.strAutoDenomResult;
+                convert << freedomSendPool.strAutoDenomResult;
             }
-            showingDarkSendMessage = 0;
+            showingFreedomSendMessage = 0;
         } else if (accepted == 1) {
-            convert << tr("Darksend request complete: Your transaction was accepted into the pool!").toStdString();
-            if(showingDarkSendMessage % 10 > 8) {
-                darkSendPool.lastEntryAccepted = 0;
-                showingDarkSendMessage = 0;
+            convert << tr("Freedomsend request complete: Your transaction was accepted into the pool!").toStdString();
+            if(showingFreedomSendMessage % 10 > 8) {
+                freedomSendPool.lastEntryAccepted = 0;
+                showingFreedomSendMessage = 0;
             }
         } else {
-            if(showingDarkSendMessage % 70 <= 40) convert << tr("Submitted following entries to masternode:").toStdString() << " " << entries << "/" << darkSendPool.GetMaxPoolTransactions();
-            else if(showingDarkSendMessage % 70 <= 50) convert << tr("Submitted to masternode, waiting for more entries").toStdString() << " (" << entries << "/" << darkSendPool.GetMaxPoolTransactions() << " ) .";
-            else if(showingDarkSendMessage % 70 <= 60) convert << tr("Submitted to masternode, waiting for more entries").toStdString() << " (" << entries << "/" << darkSendPool.GetMaxPoolTransactions() << " ) ..";
-            else if(showingDarkSendMessage % 70 <= 70) convert << tr("Submitted to masternode, waiting for more entries").toStdString() << " (" << entries << "/" << darkSendPool.GetMaxPoolTransactions() << " ) ...";
+            if(showingFreedomSendMessage % 70 <= 40) convert << tr("Submitted following entries to masternode:").toStdString() << " " << entries << "/" << freedomSendPool.GetMaxPoolTransactions();
+            else if(showingFreedomSendMessage % 70 <= 50) convert << tr("Submitted to masternode, waiting for more entries").toStdString() << " (" << entries << "/" << freedomSendPool.GetMaxPoolTransactions() << " ) .";
+            else if(showingFreedomSendMessage % 70 <= 60) convert << tr("Submitted to masternode, waiting for more entries").toStdString() << " (" << entries << "/" << freedomSendPool.GetMaxPoolTransactions() << " ) ..";
+            else if(showingFreedomSendMessage % 70 <= 70) convert << tr("Submitted to masternode, waiting for more entries").toStdString() << " (" << entries << "/" << freedomSendPool.GetMaxPoolTransactions() << " ) ...";
         }
     } else if(state == POOL_STATUS_SIGNING) {
-        if(showingDarkSendMessage % 70 <= 10) convert << tr("Found enough users, signing ...").toStdString();
-        else if(showingDarkSendMessage % 70 <= 20) convert << tr("Found enough users, signing ( waiting").toStdString() << ". )";
-        else if(showingDarkSendMessage % 70 <= 30) convert << tr("Found enough users, signing ( waiting").toStdString() << ".. )";
-        else if(showingDarkSendMessage % 70 <= 40) convert << tr("Found enough users, signing ( waiting").toStdString() << "... )";
+        if(showingFreedomSendMessage % 70 <= 10) convert << tr("Found enough users, signing ...").toStdString();
+        else if(showingFreedomSendMessage % 70 <= 20) convert << tr("Found enough users, signing ( waiting").toStdString() << ". )";
+        else if(showingFreedomSendMessage % 70 <= 30) convert << tr("Found enough users, signing ( waiting").toStdString() << ".. )";
+        else if(showingFreedomSendMessage % 70 <= 40) convert << tr("Found enough users, signing ( waiting").toStdString() << "... )";
     } else if(state == POOL_STATUS_TRANSMISSION) {
         convert << tr("Transmitting final transaction.").toStdString();
     } else if (state == POOL_STATUS_IDLE) {
-        convert << tr("Darksend is idle.").toStdString();
+        convert << tr("Freedomsend is idle.").toStdString();
     } else if (state == POOL_STATUS_FINALIZE_TRANSACTION) {
         convert << tr("Finalizing transaction.").toStdString();
     } else if(state == POOL_STATUS_ERROR) {
-        convert << tr("Darksend request incomplete:").toStdString() << " " << darkSendPool.lastMessage << ". " << tr("Will retry...").toStdString();
+        convert << tr("Freedomsend request incomplete:").toStdString() << " " << freedomSendPool.lastMessage << ". " << tr("Will retry...").toStdString();
     } else if(state == POOL_STATUS_SUCCESS) {
-        convert << tr("Darksend request complete:").toStdString() << " " << darkSendPool.lastMessage;
+        convert << tr("Freedomsend request complete:").toStdString() << " " << freedomSendPool.lastMessage;
     } else if(state == POOL_STATUS_QUEUE) {
-        if(showingDarkSendMessage % 70 <= 50) convert << tr("Submitted to masternode, waiting in queue").toStdString() << " .";
-        else if(showingDarkSendMessage % 70 <= 60) convert << tr("Submitted to masternode, waiting in queue").toStdString() << " ..";
-        else if(showingDarkSendMessage % 70 <= 70) convert << tr("Submitted to masternode, waiting in queue").toStdString() << " ...";
+        if(showingFreedomSendMessage % 70 <= 50) convert << tr("Submitted to masternode, waiting in queue").toStdString() << " .";
+        else if(showingFreedomSendMessage % 70 <= 60) convert << tr("Submitted to masternode, waiting in queue").toStdString() << " ..";
+        else if(showingFreedomSendMessage % 70 <= 70) convert << tr("Submitted to masternode, waiting in queue").toStdString() << " ...";
     } else {
         convert << tr("Unknown state:").toStdString() << " id = " << state;
     }
 
-    if(state == POOL_STATUS_ERROR || state == POOL_STATUS_SUCCESS) darkSendPool.Check();
+    if(state == POOL_STATUS_ERROR || state == POOL_STATUS_SUCCESS) freedomSendPool.Check();
 
     QString s(convert.str().c_str());
-    s = tr("Last Darksend message:\n") + s;
+    s = tr("Last Freedomsend message:\n") + s;
 
-    if(s != ui->darksendStatus->text())
-        LogPrintf("Last Darksend message: %s\n", convert.str().c_str());
+    if(s != ui->freedomsendStatus->text())
+        LogPrintf("Last Freedomsend message: %s\n", convert.str().c_str());
 
-    ui->darksendStatus->setText(s);
+    ui->freedomsendStatus->setText(s);
 
-    if(darkSendPool.sessionDenom == 0){
+    if(freedomSendPool.sessionDenom == 0){
         ui->labelSubmittedDenom->setText(tr("N/A"));
     } else {
         std::string out;
-        darkSendPool.GetDenominationsToString(darkSendPool.sessionDenom, out);
+        freedomSendPool.GetDenominationsToString(freedomSendPool.sessionDenom, out);
         QString s2(out.c_str());
         ui->labelSubmittedDenom->setText(s2);
     }
 
-    showingDarkSendMessage++;
-    darksendActionCheck++;
+    showingFreedomSendMessage++;
+    freedomsendActionCheck++;
 
-    // Get DarkSend Denomination Status
+    // Get FreedomSend Denomination Status
 }
 
-void OverviewPage::darksendAuto(){
-    darkSendPool.DoAutomaticDenominating();
+void OverviewPage::freedomsendAuto(){
+    freedomSendPool.DoAutomaticDenominating();
 }
 
-void OverviewPage::darksendReset(){
-    darkSendPool.Reset();
+void OverviewPage::freedomsendReset(){
+    freedomSendPool.Reset();
 
-    QMessageBox::warning(this, tr("Darksend"),
-        tr("Darksend was successfully reset."),
+    QMessageBox::warning(this, tr("Freedomsend"),
+        tr("Freedomsend was successfully reset."),
         QMessageBox::Ok, QMessageBox::Ok);
 }
 
-void OverviewPage::toggleDarksend(){
-    if(!fEnableDarksend){
+void OverviewPage::toggleFreedomsend(){
+    if(!fEnableFreedomsend){
         int64_t balance = pwalletMain->GetBalance();
         float minAmount = 1.49 * COIN;
         if(balance < minAmount){
@@ -469,8 +469,8 @@ void OverviewPage::toggleDarksend(){
                 BitcoinUnits::formatWithUnit(
                     walletModel->getOptionsModel()->getDisplayUnit(),
                     minAmount));
-            QMessageBox::warning(this, tr("Darksend"),
-                tr("Darksend requires at least %1 to use.").arg(strMinAmount),
+            QMessageBox::warning(this, tr("Freedomsend"),
+                tr("Freedomsend requires at least %1 to use.").arg(strMinAmount),
                 QMessageBox::Ok, QMessageBox::Ok);
             return;
         }
@@ -482,33 +482,33 @@ void OverviewPage::toggleDarksend(){
             if(!ctx.isValid())
             {
                 //unlock was cancelled
-                darkSendPool.cachedNumBlocks = 0;
-                QMessageBox::warning(this, tr("Darksend"),
-                    tr("Wallet is locked and user declined to unlock. Disabling Darksend."),
+                freedomSendPool.cachedNumBlocks = 0;
+                QMessageBox::warning(this, tr("Freedomsend"),
+                    tr("Wallet is locked and user declined to unlock. Disabling Freedomsend."),
                     QMessageBox::Ok, QMessageBox::Ok);
-                if (fDebug) LogPrintf("Wallet is locked and user declined to unlock. Disabling Darksend.\n");
+                if (fDebug) LogPrintf("Wallet is locked and user declined to unlock. Disabling Freedomsend.\n");
                 return;
             }
         }
 
     }
 
-    darkSendPool.cachedNumBlocks = 0;
-    fEnableDarksend = !fEnableDarksend;
+    freedomSendPool.cachedNumBlocks = 0;
+    fEnableFreedomsend = !fEnableFreedomsend;
 
-    if(!fEnableDarksend){
-        ui->toggleDarksend->setText(tr("BeginFreedomSend"));
+    if(!fEnableFreedomsend){
+        ui->toggleFreedomsend->setText(tr("BeginFreedomSend"));
     } else {
-        ui->toggleDarksend->setText(tr("End FreedomSend"));
+        ui->toggleFreedomsend->setText(tr("End FreedomSend"));
 
-        /* show darksend configuration if client has defaults set */
+        /* show freedomsend configuration if client has defaults set */
 
-        if(nAnonymizeDarkcoinAmount == 0){
-            DarksendConfig dlg(this);
+        if(nAnonymizePatriotBitAmount == 0){
+            FreedomsendConfig dlg(this);
             dlg.setModel(walletModel);
             dlg.exec();
         }
 
-        darkSendPool.DoAutomaticDenominating();
+        freedomSendPool.DoAutomaticDenominating();
     }
 }

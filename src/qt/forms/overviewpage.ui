@@ -261,7 +261,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frameDarksend">
+        <widget class="QFrame" name="frameFreedomsend">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -307,7 +307,7 @@
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QLabel" name="darksendEnabled">
+            <widget class="QLabel" name="freedomsendEnabled">
              <property name="text">
               <string>Enabled/Disabled</string>
              </property>
@@ -321,7 +321,7 @@
             </widget>
            </item>
            <item row="1" column="1">
-            <widget class="QProgressBar" name="darksendProgress">
+            <widget class="QProgressBar" name="freedomsendProgress">
              <property name="maximumSize">
               <size>
                <width>154</width>
@@ -823,7 +823,7 @@
            <bool>true</bool>
           </property>
          </widget>
-         <widget class="QPushButton" name="toggleDarksend">
+         <widget class="QPushButton" name="toggleFreedomsend">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -855,7 +855,7 @@
            <enum>Qt::Horizontal</enum>
           </property>
          </widget>
-         <widget class="QLabel" name="darksendStatus">
+         <widget class="QLabel" name="freedomsendStatus">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -880,7 +880,7 @@
            <bool>true</bool>
           </property>
          </widget>
-         <widget class="QPushButton" name="darksendAuto">
+         <widget class="QPushButton" name="freedomsendAuto">
           <property name="geometry">
            <rect>
             <x>230</x>
@@ -902,7 +902,7 @@
            <string>Try Mix</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="darksendReset">
+         <widget class="QPushButton" name="freedomsendReset">
           <property name="geometry">
            <rect>
             <x>230</x>
@@ -951,7 +951,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="labelDarksendSyncStatus">
+            <widget class="QLabel" name="labelFreedomsendSyncStatus">
              <property name="toolTip">
               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the PatriotBit network after a connection is established, but this process has not completed yet.</string>
              </property>

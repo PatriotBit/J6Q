@@ -97,16 +97,16 @@ inline void MilliSleep(int64_t n)
 extern bool fMasterNode;
 extern bool fLiteMode;
 extern int nInstantXDepth;
-extern int nDarksendRounds;
-extern int nAnonymizeDarkcoinAmount;
+extern int nFreedomsendRounds;
+extern int nAnonymizePatriotBitAmount;
 extern int nLiquidityProvider;
-extern bool fEnableDarksend;
+extern bool fEnableFreedomsend;
 extern int64_t enforceMasternodePaymentsTime;
 extern std::string strMasterNodeAddr;
 extern int nMasternodeMinProtocol;
 extern int keysLoaded;
 extern bool fSucessfullyLoaded;
-extern std::vector<int64_t> darkSendDenominations;
+extern std::vector<int64_t> freedomSendDenominations;
 
 extern std::map<std::string, std::string> mapArgs;
 extern std::map<std::string, std::vector<std::string> > mapMultiArgs;

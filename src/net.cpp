@@ -14,7 +14,7 @@
 #include "chainparams.h"
 #include "core.h"
 #include "ui_interface.h"
-#include "darksend.h"
+#include "freedomsend.h"
 #include "wallet.h"
 
 #ifdef WIN32
@@ -447,7 +447,7 @@ CNode* FindNode(const CService& addr)
     return NULL;
 }
 
-CNode* ConnectNode(CAddress addrConnect, const char *pszDest, bool darkSendMaster)
+CNode* ConnectNode(CAddress addrConnect, const char *pszDest, bool freedomSendMaster)
 {
     if (pszDest == NULL) {
         if (IsLocal(addrConnect))
@@ -459,8 +459,8 @@ CNode* ConnectNode(CAddress addrConnect, const char *pszDest, bool darkSendMaste
         {
             pnode->AddRef();
 
-            if(darkSendMaster)
-                pnode->fDarkSendMaster = true;
+            if(freedomSendMaster)
+                pnode->fFreedomSendMaster = true;
 
             return pnode;
         }
@@ -500,7 +500,7 @@ CNode* ConnectNode(CAddress addrConnect, const char *pszDest, bool darkSendMaste
 
         pnode->nTimeConnected = GetTime();
         pnode->AddRef();
-        if(darkSendMaster) pnode->fDarkSendMaster = true;
+        if(freedomSendMaster) pnode->fFreedomSendMaster = true;
         return pnode;
     }
     else
@@ -768,8 +768,8 @@ void ThreadSocketHandler()
                     (pnode->GetRefCount() <= 0 && pnode->vRecvMsg.empty() && pnode->nSendSize == 0 && pnode->ssSend.empty()))
                 {
 
-                    LogPrintf("removing node: peer=%d addr=%s nRefCount=%d fNetworkNode=%d fInbound=%d fDarkSendMaster=%d\n",
-                               pnode->id, pnode->addr.ToString().c_str(), pnode->GetRefCount(), pnode->fNetworkNode, pnode->fInbound, pnode->fDarkSendMaster);
+                    LogPrintf("removing node: peer=%d addr=%s nRefCount=%d fNetworkNode=%d fInbound=%d fFreedomSendMaster=%d\n",
+                               pnode->id, pnode->addr.ToString().c_str(), pnode->GetRefCount(), pnode->fNetworkNode, pnode->fInbound, pnode->fFreedomSendMaster);
 
                     // remove from vNodes
                     vNodes.erase(remove(vNodes.begin(), vNodes.end(), pnode), vNodes.end());

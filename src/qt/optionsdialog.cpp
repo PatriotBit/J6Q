@@ -13,7 +13,7 @@
 #include "guiutil.h"
 #include "monitoreddatamapper.h"
 #include "optionsmodel.h"
-#include "darksend.h"
+#include "freedomsend.h"
 
 #include "main.h" // for CTransaction::nMinTxFee and MAX_SCRIPTCHECK_THREADS
 #include "netbase.h"
@@ -212,9 +212,9 @@ void OptionsDialog::setMapper()
     mapper->addMapping(ui->thirdPartyTxUrls, OptionsModel::ThirdPartyTxUrls);
 
 
-    /* Darksend Rounds */
-    mapper->addMapping(ui->darksendRounds, OptionsModel::DarksendRounds);
-    mapper->addMapping(ui->anonymizeDarkcoin, OptionsModel::AnonymizeDarkcoinAmount);
+    /* Freedomsend Rounds */
+    mapper->addMapping(ui->freedomsendRounds, OptionsModel::FreedomsendRounds);
+    mapper->addMapping(ui->anonymizePatriotBit, OptionsModel::AnonymizePatriotBitAmount);
 
 }
 
@@ -256,7 +256,7 @@ void OptionsDialog::on_resetButton_clicked()
 void OptionsDialog::on_okButton_clicked()
 {
     mapper->submit();
-    darkSendPool.cachedNumBlocks = 0;
+    freedomSendPool.cachedNumBlocks = 0;
     accept();
 }
 
