@@ -101,7 +101,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
 
         if(fAllFromMeDenom && fAllToMeDenom && nFromMe * nToMe) {
             TransactionRecord sub(hash, nTime);
-            sub.type = TransactionRecord::DarksendDenominate;
+            sub.type = TransactionRecord::FreedomsendDenominate;
             parts.append(TransactionRecord(hash, nTime, sub.type, "", -nDebit, nCredit));
         }
         else if (fAllFromMe && fAllToMe)
@@ -116,7 +116,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
 
             if(mapValue["DS"] == "1")
             {
-                sub.type = TransactionRecord::Darksent;
+                sub.type = TransactionRecord::Freedomsent;
                 CTxDestination address;
                 if (ExtractDestination(wtx.vout[0].scriptPubKey, address))
                 {
@@ -136,9 +136,9 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
                     const CTxOut& txout = wtx.vout[nOut];
                     sub.idx = parts.size();
 
-                    if(wallet->IsCollateralAmount(txout.nValue)) sub.type = TransactionRecord::DarksendMakeCollaterals;
-                    if(wallet->IsDenominatedAmount(txout.nValue)) sub.type = TransactionRecord::DarksendCreateDenominations;
-                    if(nDebit - wtx.GetValueOut() == DARKSEND_COLLATERAL) sub.type = TransactionRecord::DarksendCollateralPayment;
+                    if(wallet->IsCollateralAmount(txout.nValue)) sub.type = TransactionRecord::FreedomsendMakeCollaterals;
+                    if(wallet->IsDenominatedAmount(txout.nValue)) sub.type = TransactionRecord::FreedomsendCreateDenominations;
+                    if(nDebit - wtx.GetValueOut() == FREEDOMSEND_COLLATERAL) sub.type = TransactionRecord::FreedomsendCollateralPayment;
                 }
             }
 
@@ -184,7 +184,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
 
                 if(mapValue["DS"] == "1")
                 {
-                    sub.type = TransactionRecord::Darksent;
+                    sub.type = TransactionRecord::Freedomsent;
                 }
 
                 int64_t nValue = txout.nValue;

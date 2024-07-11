@@ -5,7 +5,7 @@
 #include "masternodeman.h"
 #include "masternode.h"
 #include "activemasternode.h"
-#include "darksend.h"
+#include "freedomsend.h"
 #include "core.h"
 #include "util.h"
 #include "addrman.h"
@@ -528,13 +528,13 @@ void CMasternodeMan::ProcessMasternodeConnections()
 
     LOCK(cs_vNodes);
 
-    if(!darkSendPool.pSubmittedToMasternode) return;
+    if(!freedomSendPool.pSubmittedToMasternode) return;
 
     BOOST_FOREACH(CNode* pnode, vNodes)
     {
-        if(darkSendPool.pSubmittedToMasternode->addr == pnode->addr) continue;
+        if(freedomSendPool.pSubmittedToMasternode->addr == pnode->addr) continue;
 
-        if(pnode->fDarkSendMaster){
+        if(pnode->fFreedomSendMaster){
             LogPrintf("Closing Masternode connection %s \n", pnode->addr.ToString().c_str());
             pnode->CloseSocketDisconnect();
         }
@@ -544,12 +544,12 @@ void CMasternodeMan::ProcessMasternodeConnections()
 void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
 {
 
-    if(fLiteMode) return; //disable all Darksend/Masternode related functionality
+    if(fLiteMode) return; //disable all Freedomsend/Masternode related functionality
     if(IsInitialBlockDownload()) return;
 
     LOCK(cs_process_message);
 
-    if (strCommand == "dsee") { //DarkSend Election Entry
+    if (strCommand == "dsee") { //FreedomSend Election Entry
 
         CTxIn vin;
         CService addr;
@@ -616,7 +616,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
         }
 
         std::string errorMessage = "";
-        if(!darkSendSigner.VerifyMessage(pubkey, vchSig, strMessage, errorMessage)){
+        if(!freedomSendSigner.VerifyMessage(pubkey, vchSig, strMessage, errorMessage)){
             LogPrintf("dsee - Got bad Masternode address signature\n");
             Misbehaving(pfrom->GetId(), 100);
             return;
@@ -624,8 +624,8 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
 
         /*
         if(Params().NetworkID() == CChainParams::MAIN){
-            if(addr.GetPort() != 9999) return;
-        } else if(addr.GetPort() == 9999) return;
+            if(addr.GetPort() != 51400) return;
+        } else if(addr.GetPort() == 51400) return;
         */
 
         //search existing Masternode list, this is where we update existing Masternodes with new dsee broadcasts
@@ -660,7 +660,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
 
         // make sure the vout that was signed is related to the transaction that spawned the Masternode
         //  - this is expensive, so it's only done once per Masternode
-        //if(!darkSendSigner.IsVinAssociatedWithPubkey(vin, pubkey)) {
+        //if(!freedomSendSigner.IsVinAssociatedWithPubkey(vin, pubkey)) {
         //    LogPrintf("dsee - Got mismatched pubkey and vin\n");
         //    Misbehaving(pfrom->GetId(), 100);
         //    return;
@@ -669,11 +669,11 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
         if(fDebug) LogPrintf("dsee - Got NEW Masternode entry %s\n", addr.ToString().c_str());
 
         // make sure it's still unspent
-        //  - this is checked later by .check() in many places and by ThreadCheckDarkSendPool()
+        //  - this is checked later by .check() in many places and by ThreadCheckFreedomSendPool()
 
         CValidationState state;
         CTransaction tx = CTransaction();
-        CTxOut vout = CTxOut(999.99*COIN, darkSendPool.collateralPubKey);
+        CTxOut vout = CTxOut(999.99*COIN, freedomSendPool.collateralPubKey);
         tx.vin.push_back(vin);
         tx.vout.push_back(vout);
         if(AcceptableInputs(mempool, state, tx)){
@@ -739,7 +739,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
         }
     }
 
-    else if (strCommand == "dseep") { //DarkSend Election Entry Ping
+    else if (strCommand == "dseep") { //FreedomSend Election Entry Ping
 
         CTxIn vin;
         vector<unsigned char> vchSig;
@@ -770,7 +770,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
                 std::string strMessage = pmn->addr.ToString() + boost::lexical_cast<std::string>(sigTime) + boost::lexical_cast<std::string>(stop);
 
                 std::string errorMessage = "";
-                if(!darkSendSigner.VerifyMessage(pmn->pubkey2, vchSig, strMessage, errorMessage))
+                if(!freedomSendSigner.VerifyMessage(pmn->pubkey2, vchSig, strMessage, errorMessage))
                 {
                     LogPrintf("dseep - Got bad Masternode address signature %s \n", vin.ToString().c_str());
                     //Misbehaving(pfrom->GetId(), 100);
@@ -826,7 +826,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
                 std::string strMessage = vin.ToString() + boost::lexical_cast<std::string>(nVote);
 
                 std::string errorMessage = "";
-                if(!darkSendSigner.VerifyMessage(pmn->pubkey2, vchSig, strMessage, errorMessage))
+                if(!freedomSendSigner.VerifyMessage(pmn->pubkey2, vchSig, strMessage, errorMessage))
                 {
                     LogPrintf("mvote - Got bad Masternode address signature %s \n", vin.ToString().c_str());
                     return;

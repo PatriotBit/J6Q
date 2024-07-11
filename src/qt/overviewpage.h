@@ -32,10 +32,10 @@ public:
     void setClientModel(ClientModel *clientModel);
     void setWalletModel(WalletModel *walletModel);
     void showOutOfSyncWarning(bool fShow);
-    void updateDarksendProgress();
+    void updateFreedomsendProgress();
 
 public slots:
-    void darkSendStatus();
+    void freedomSendStatus();
     void setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 immatureBalance, qint64 anonymizedBalance);
 
 signals:
@@ -53,17 +53,17 @@ private:
     qint64 cachedTxLocks;
     qint64 lastNewBlock;
 
-    int showingDarkSendMessage;
-    int darksendActionCheck;
+    int showingFreedomSendMessage;
+    int freedomsendActionCheck;
     int cachedNumBlocks;
 
     TxViewDelegate *txdelegate;
     TransactionFilterProxy *filter;
 
 private slots:
-    void toggleDarksend();
-    void darksendAuto();
-    void darksendReset();
+    void toggleFreedomsend();
+    void freedomsendAuto();
+    void freedomsendReset();
     void updateDisplayUnit();
     void handleTransactionClicked(const QModelIndex &index);
     void updateAlerts(const QString &warnings);

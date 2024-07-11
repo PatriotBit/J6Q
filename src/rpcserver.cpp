@@ -276,7 +276,7 @@ static const CRPCCommand vRPCCommands[] =
     { "masternode",             &masternode,             true,      false,      true  },
     { "masternodelist",         &masternodelist,         true,      false,      false },
 #ifdef ENABLE_WALLET
-    { "darksend",               &darksend,               false,     false,      true  },
+    { "freedomsend",               &freedomsend,               false,     false,      true  },
 
     /* Wallet */
     { "addmultisigaddress",     &addmultisigaddress,     false,     false,      true },
@@ -903,7 +903,7 @@ std::string HelpExampleCli(string methodname, string args){
 
 std::string HelpExampleRpc(string methodname, string args){
     return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", "
-        "\"method\": \"" + methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:9998/\n";
+        "\"method\": \"" + methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:51401/\n";
 }
 
 const CRPCTable tableRPC;

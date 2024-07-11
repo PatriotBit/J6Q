@@ -52,7 +52,7 @@ CMasternodeScanning mnscan;
 
 void ProcessMessageMasternodePOS(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
 {
-    if(fLiteMode) return; //disable all darksend/masternode related functionality
+    if(fLiteMode) return; //disable all freedomsend/masternode related functionality
     if(!IsSporkActive(SPORK_7_MASTERNODE_SCANNING)) return;
     if(IsInitialBlockDownload()) return;
 
@@ -146,7 +146,7 @@ void CMasternodeScanning::CleanMasternodeScanningErrors()
 void CMasternodeScanning::DoMasternodePOSChecks()
 {
     if(!fMasterNode) return;
-    if(fLiteMode) return; //disable all darksend/masternode related functionality
+    if(fLiteMode) return; //disable all freedomsend/masternode related functionality
     if(!IsSporkActive(SPORK_7_MASTERNODE_SCANNING)) return;
     if(IsInitialBlockDownload()) return;
 
@@ -199,7 +199,7 @@ bool CMasternodeScanningError::SignatureValid()
     ExtractDestination(pubkey, address1);
     CBitcoinAddress address2(address1);
 
-    if(!darkSendSigner.VerifyMessage(pmn->pubkey2, vchMasterNodeSignature, strMessage, errorMessage)) {
+    if(!freedomSendSigner.VerifyMessage(pmn->pubkey2, vchMasterNodeSignature, strMessage, errorMessage)) {
         LogPrintf("CMasternodeScanningError::SignatureValid() - Verify message failed\n");
         return false;
     }
@@ -216,7 +216,7 @@ bool CMasternodeScanningError::Sign()
     std::string strMessage = vinMasternodeA.ToString() + vinMasternodeB.ToString() + 
         boost::lexical_cast<std::string>(nBlockHeight) + boost::lexical_cast<std::string>(nErrorType);
 
-    if(!darkSendSigner.SetKey(strMasterNodePrivKey, errorMessage, key2, pubkey2))
+    if(!freedomSendSigner.SetKey(strMasterNodePrivKey, errorMessage, key2, pubkey2))
     {
         LogPrintf("CMasternodeScanningError::Sign() - ERROR: Invalid masternodeprivkey: '%s'\n", errorMessage.c_str());
         return false;
@@ -229,12 +229,12 @@ bool CMasternodeScanningError::Sign()
     CBitcoinAddress address2(address1);
     //LogPrintf("signing pubkey2 %s \n", address2.ToString().c_str());
 
-    if(!darkSendSigner.SignMessage(strMessage, errorMessage, vchMasterNodeSignature, key2)) {
+    if(!freedomSendSigner.SignMessage(strMessage, errorMessage, vchMasterNodeSignature, key2)) {
         LogPrintf("CMasternodeScanningError::Sign() - Sign message failed");
         return false;
     }
 
-    if(!darkSendSigner.VerifyMessage(pubkey2, vchMasterNodeSignature, strMessage, errorMessage)) {
+    if(!freedomSendSigner.VerifyMessage(pubkey2, vchMasterNodeSignature, strMessage, errorMessage)) {
         LogPrintf("CMasternodeScanningError::Sign() - Verify message failed");
         return false;
     }

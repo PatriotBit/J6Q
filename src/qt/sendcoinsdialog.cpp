@@ -49,19 +49,19 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 
     // PatriotBit specific
     if(fLiteMode) {
-        ui->checkUseDarksend->setChecked(false);
-        ui->checkUseDarksend->setVisible(false);
+        ui->checkUseFreedomsend->setChecked(false);
+        ui->checkUseFreedomsend->setVisible(false);
         ui->checkInstantX->setVisible(false);
-        CoinControlDialog::coinControl->useDarkSend = false;
+        CoinControlDialog::coinControl->useFreedomSend = false;
         CoinControlDialog::coinControl->useInstantX = false;
     }
 	// PatriotBit TEMP
-    ui->checkUseDarksend->setChecked(false);
-    ui->checkUseDarksend->setVisible(false);
+    ui->checkUseFreedomsend->setChecked(false);
+    ui->checkUseFreedomsend->setVisible(false);
     ui->checkInstantX->setChecked(false);
     ui->checkInstantX->setVisible(false);
 	
-    connect(ui->checkUseDarksend, SIGNAL(stateChanged ( int )), this, SLOT(updateDisplayUnit()));
+    connect(ui->checkUseFreedomsend, SIGNAL(stateChanged ( int )), this, SLOT(updateDisplayUnit()));
     connect(ui->checkInstantX, SIGNAL(stateChanged ( int )), this, SLOT(updateInstantX()));
 
     // Coin Control: clipboard actions
@@ -161,14 +161,14 @@ void SendCoinsDialog::on_sendButton_clicked()
     QString strFee = "";
     recipients[0].inputType = ONLY_DENOMINATED;
 
-    if(ui->checkUseDarksend->isChecked()) {
+    if(ui->checkUseFreedomsend->isChecked()) {
         recipients[0].inputType = ONLY_DENOMINATED;
         strFunds = tr("using") + " <b>" + tr("anonymous funds") + "</b>";
         QString strNearestAmount(
             BitcoinUnits::formatWithUnit(
                 model->getOptionsModel()->getDisplayUnit(), 0.1 * COIN));
         strFee = QString(tr(
-            "(darksend requires this amount to be rounded up to the nearest %1)."
+            "(freedomsend requires this amount to be rounded up to the nearest %1)."
         ).arg(strNearestAmount));
     } else {
         recipients[0].inputType = ALL_COINS;
@@ -475,7 +475,7 @@ void SendCoinsDialog::setBalance(qint64 balance, qint64 unconfirmedBalance, qint
     {
 	    uint64_t bal = 0;
 
-	    if(ui->checkUseDarksend->isChecked()) {
+	    if(ui->checkUseFreedomsend->isChecked()) {
 		bal = anonymizedBalance;
 	    } else {
 		bal = balance;
@@ -488,7 +488,7 @@ void SendCoinsDialog::setBalance(qint64 balance, qint64 unconfirmedBalance, qint
 void SendCoinsDialog::updateDisplayUnit()
 {
     setBalance(model->getBalance(), model->getUnconfirmedBalance(), model->getImmatureBalance(), model->getAnonymizedBalance());
-    CoinControlDialog::coinControl->useDarkSend = ui->checkUseDarksend->isChecked();
+    CoinControlDialog::coinControl->useFreedomSend = ui->checkUseFreedomsend->isChecked();
     coinControlUpdateLabels();
 }
 
@@ -690,7 +690,7 @@ void SendCoinsDialog::coinControlUpdateLabels()
             CoinControlDialog::payAmounts.append(entry->getValue().amount);
     }
 
-    ui->checkUseDarksend->setChecked(CoinControlDialog::coinControl->useDarkSend);
+    ui->checkUseFreedomsend->setChecked(CoinControlDialog::coinControl->useFreedomSend);
 
     if (CoinControlDialog::coinControl->HasSelected())
     {

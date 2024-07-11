@@ -16,7 +16,7 @@
 #include "coincontrol.h"
 #include "main.h"
 #include "wallet.h"
-#include "darksend.h"
+#include "freedomsend.h"
 
 #include <QApplication>
 #include <QCheckBox>
@@ -123,7 +123,7 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
     ui->treeWidget->setColumnWidth(COLUMN_AMOUNT, 100);
     ui->treeWidget->setColumnWidth(COLUMN_LABEL, 170);
     ui->treeWidget->setColumnWidth(COLUMN_ADDRESS, 190);
-    ui->treeWidget->setColumnWidth(COLUMN_DARKSEND_ROUNDS, 120);
+    ui->treeWidget->setColumnWidth(COLUMN_FREEDOMSEND_ROUNDS, 120);
     ui->treeWidget->setColumnWidth(COLUMN_DATE, 80);
     ui->treeWidget->setColumnWidth(COLUMN_CONFIRMATIONS, 100);
     ui->treeWidget->setColumnWidth(COLUMN_PRIORITY, 100);
@@ -388,12 +388,12 @@ void CoinControlDialog::viewItemChanged(QTreeWidgetItem* item, int column)
         else {
             coinControl->Select(outpt);
             CTxIn vin(outpt);
-            int rounds = GetInputDarksendRounds(vin);
-            if(coinControl->useDarkSend && rounds < nDarksendRounds) {
+            int rounds = GetInputFreedomsendRounds(vin);
+            if(coinControl->useFreedomSend && rounds < nFreedomsendRounds) {
                 QMessageBox::warning(this, windowTitle(),
-                    tr("Non-anonymized input selected. <b>Darksend will be disabled.</b><br><br>If you still want to use Darksend, please deselect all non-nonymized inputs first and then check Darksend checkbox again."),
+                    tr("Non-anonymized input selected. <b>Freedomsend will be disabled.</b><br><br>If you still want to use Freedomsend, please deselect all non-nonymized inputs first and then check Freedomsend checkbox again."),
                     QMessageBox::Ok, QMessageBox::Ok);
-                coinControl->useDarkSend = false;
+                coinControl->useFreedomSend = false;
             }
         }
 
@@ -556,7 +556,7 @@ void CoinControlDialog::updateLabels(WalletModel *model, QDialog* dialog)
             nChange = nAmount - nPayFee - nPayAmount;
 
             // DS Fee = overpay
-            if(coinControl->useDarkSend && nChange > 0)
+            if(coinControl->useFreedomSend && nChange > 0)
             {
                 nPayFee += nChange;
                 nChange = 0;
@@ -771,10 +771,10 @@ void CoinControlDialog::updateView()
 
             // ds+ rounds
             CTxIn vin = CTxIn(out.tx->GetHash(), out.i);
-            int rounds = GetInputDarksendRounds(vin);
+            int rounds = GetInputFreedomsendRounds(vin);
 
-            if(rounds >= 0) itemOutput->setText(COLUMN_DARKSEND_ROUNDS, strPad(QString::number(rounds), 15, " "));
-            else itemOutput->setText(COLUMN_DARKSEND_ROUNDS, strPad(QString(tr("n/a")), 15, " "));
+            if(rounds >= 0) itemOutput->setText(COLUMN_FREEDOMSEND_ROUNDS, strPad(QString::number(rounds), 15, " "));
+            else itemOutput->setText(COLUMN_FREEDOMSEND_ROUNDS, strPad(QString(tr("n/a")), 15, " "));
 
 
             // confirmations

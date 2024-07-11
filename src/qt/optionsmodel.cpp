@@ -72,14 +72,14 @@ void OptionsModel::Init()
         settings.setValue("fCoinControlFeatures", false);
     fCoinControlFeatures = settings.value("fCoinControlFeatures", false).toBool();
 
-    if (!settings.contains("nDarksendRounds"))
-        settings.setValue("nDarksendRounds", 2);
+    if (!settings.contains("nFreedomsendRounds"))
+        settings.setValue("nFreedomsendRounds", 2);
 
-    if (!settings.contains("nAnonymizeDarkcoinAmount"))
-        settings.setValue("nAnonymizeDarkcoinAmount", 1000);
+    if (!settings.contains("nAnonymizePatriotBitAmount"))
+        settings.setValue("nAnonymizePatriotBitAmount", 1000);
 
-    nDarksendRounds = settings.value("nDarksendRounds").toLongLong();
-    nAnonymizeDarkcoinAmount = settings.value("nAnonymizeDarkcoinAmount").toLongLong();
+    nFreedomsendRounds = settings.value("nFreedomsendRounds").toLongLong();
+    nAnonymizePatriotBitAmount = settings.value("nAnonymizePatriotBitAmount").toLongLong();
 
     // These are shared with the core or have a command-line parameter
     // and we want command-line parameters to overwrite the GUI settings.
@@ -160,10 +160,10 @@ void OptionsModel::Init()
          }
      }
      
-    if (settings.contains("nDarksendRounds"))
-        SoftSetArg("-darksendrounds", settings.value("nDarksendRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeDarkcoinAmount"))
-        SoftSetArg("-anonymizepatriotbitamount", settings.value("nAnonymizeDarkcoinAmount").toString().toStdString());
+    if (settings.contains("nFreedomsendRounds"))
+        SoftSetArg("-freedomsendrounds", settings.value("nFreedomsendRounds").toString().toStdString());
+    if (settings.contains("nAnonymizePatriotBitAmount"))
+        SoftSetArg("-anonymizepatriotbitamount", settings.value("nAnonymizePatriotBitAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -253,10 +253,10 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return settings.value("nThreadsScriptVerif");
         case MiningIntensity:
             return settings.value("nMiningIntensity");
-        case DarksendRounds:
-            return QVariant(nDarksendRounds);
-        case AnonymizeDarkcoinAmount:
-            return QVariant(nAnonymizeDarkcoinAmount);
+        case FreedomsendRounds:
+            return QVariant(nFreedomsendRounds);
+        case AnonymizePatriotBitAmount:
+            return QVariant(nAnonymizePatriotBitAmount);
         default:
             return QVariant();
         }
@@ -376,15 +376,15 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
                 setRestartRequired(true);
             }
             break;
-        case DarksendRounds:
-            nDarksendRounds = value.toInt();
-            settings.setValue("nDarksendRounds", nDarksendRounds);
-            emit darksendRoundsChanged(nDarksendRounds);
+        case FreedomsendRounds:
+            nFreedomsendRounds = value.toInt();
+            settings.setValue("nFreedomsendRounds", nFreedomsendRounds);
+            emit freedomsendRoundsChanged(nFreedomsendRounds);
             break;
-        case AnonymizeDarkcoinAmount:
-            nAnonymizeDarkcoinAmount = value.toInt();
-            settings.setValue("nAnonymizeDarkcoinAmount", nAnonymizeDarkcoinAmount);
-            emit anonymizeDarkcoinAmountChanged(nAnonymizeDarkcoinAmount);
+        case AnonymizePatriotBitAmount:
+            nAnonymizePatriotBitAmount = value.toInt();
+            settings.setValue("nAnonymizePatriotBitAmount", nAnonymizePatriotBitAmount);
+            emit anonymizePatriotBitAmountChanged(nAnonymizePatriotBitAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

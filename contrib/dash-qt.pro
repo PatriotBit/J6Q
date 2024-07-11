@@ -18,7 +18,7 @@ HEADERS += \
     ../src/compat.h \
     ../src/core.h \
     ../src/crypter.h \
-    ../src/darksend.h \
+    ../src/freedomsend.h \
     ../src/db.h \
     ../src/hash.h \
     ../src/init.h \
@@ -76,7 +76,7 @@ HEADERS += \
     ../src/qt/coincontroldialog.h \
     ../src/qt/coincontroltreewidget.h \
     ../src/qt/csvmodelwriter.h \
-    ../src/qt/darksendconfig.h \
+    ../src/qt/freedomsendconfig.h \
     ../src/qt/editaddressdialog.h \
     ../src/qt/guiconstants.h \
     ../src/qt/guiutil.h \
@@ -137,7 +137,7 @@ SOURCES += \
     ../src/cubehash.c \
     ../src/dash-cli.cpp \
     ../src/dashd.cpp \
-    ../src/darksend.cpp \
+    ../src/freedomsend.cpp \
     ../src/db.cpp \
     ../src/echo.c \
     ../src/groestl.c \
@@ -161,7 +161,7 @@ SOURCES += \
     ../src/protocol.cpp \
     ../src/rpcblockchain.cpp \
     ../src/rpcclient.cpp \
-    ../src/rpcdarksend.cpp \
+    ../src/rpcfreedomsend.cpp \
     ../src/rpcdump.cpp \
     ../src/rpcmining.cpp \
     ../src/rpcmisc.cpp \
@@ -231,7 +231,7 @@ SOURCES += \
     ../src/qt/coincontroltreewidget.cpp \
     ../src/qt/csvmodelwriter.cpp \
     ../src/qt/dash.cpp \
-    ../src/qt/darksendconfig.cpp \
+    ../src/qt/freedomsendconfig.cpp \
     ../src/qt/editaddressdialog.cpp \
     ../src/qt/guiutil.cpp \
     ../src/qt/intro.cpp \
@@ -246,7 +246,7 @@ SOURCES += \
     ../src/qt/moc_coincontroldialog.cpp \
     ../src/qt/moc_coincontroltreewidget.cpp \
     ../src/qt/moc_csvmodelwriter.cpp \
-    ../src/qt/moc_darksendconfig.cpp \
+    ../src/qt/moc_freedomsendconfig.cpp \
     ../src/qt/moc_editaddressdialog.cpp \
     ../src/qt/moc_guiutil.cpp \
     ../src/qt/moc_intro.cpp \
@@ -323,7 +323,7 @@ FORMS += \
     ../src/qt/forms/addressbookpage.ui \
     ../src/qt/forms/askpassphrasedialog.ui \
     ../src/qt/forms/coincontroldialog.ui \
-    ../src/qt/forms/darksendconfig.ui \
+    ../src/qt/forms/freedomsendconfig.ui \
     ../src/qt/forms/editaddressdialog.ui \
     ../src/qt/forms/helpmessagedialog.ui \
     ../src/qt/forms/intro.ui \

@@ -45,8 +45,8 @@ public:
         ThreadsScriptVerif,     // int
         DatabaseCache,          // int
         SpendZeroConfChange,    // bool
-        DarksendRounds,    // int
-        AnonymizeDarkcoinAmount, //int
+        FreedomsendRounds,    // int
+        AnonymizePatriotBitAmount, //int
         OptionIDRowCount,
     };
 
@@ -91,8 +91,8 @@ private:
 signals:
     void displayUnitChanged(int unit);
     void transactionFeeChanged(qint64);
-    void darksendRoundsChanged(int);
-    void anonymizeDarkcoinAmountChanged(int);
+    void freedomsendRoundsChanged(int);
+    void anonymizePatriotBitAmountChanged(int);
     void coinControlFeaturesChanged(bool);
 };
 

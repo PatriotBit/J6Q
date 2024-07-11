@@ -79,12 +79,12 @@ public:
         RecvWithAddress,
         RecvFromOther,
         SendToSelf,
-        RecvWithDarksend,
-        DarksendDenominate,
-        DarksendCollateralPayment,
-        DarksendMakeCollaterals,
-        DarksendCreateDenominations,
-        Darksent
+        RecvWithFreedomsend,
+        FreedomsendDenominate,
+        FreedomsendCollateralPayment,
+        FreedomsendMakeCollaterals,
+        FreedomsendCreateDenominations,
+        Freedomsent
     };
 
     /** Number of confirmation recommended for accepting a transaction */

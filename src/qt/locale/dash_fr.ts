@@ -877,8 +877,8 @@ Adresse : %4
     </message>
     <message>
         <location filename="../forms/coincontroldialog.ui" line="461"/>
-        <source>Darksend Rounds</source>
-        <translation>Cycles Darksend</translation>
+        <source>Freedomsend Rounds</source>
+        <translation>Cycles Freedomsend</translation>
     </message>
     <message>
         <location filename="../forms/coincontroldialog.ui" line="466"/>
@@ -1108,88 +1108,88 @@ Adresse : %4
     </message>
 </context>
 <context>
-    <name>DarksendConfig</name>
+    <name>FreedomsendConfig</name>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="14"/>
-        <source>Configure Darksend</source>
-        <translation>Configurer Darksend</translation>
+        <location filename="../forms/freedomsendconfig.ui" line="14"/>
+        <source>Configure Freedomsend</source>
+        <translation>Configurer Freedomsend</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="26"/>
+        <location filename="../forms/freedomsendconfig.ui" line="26"/>
         <source>Basic Privacy</source>
         <translation>Confidentialité normale</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="39"/>
+        <location filename="../forms/freedomsendconfig.ui" line="39"/>
         <source>High Privacy</source>
         <translation>Confidentialité élevée</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="52"/>
+        <location filename="../forms/freedomsendconfig.ui" line="52"/>
         <source>Maximum Privacy</source>
         <translation>Confidentialité maximale</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="65"/>
+        <location filename="../forms/freedomsendconfig.ui" line="65"/>
         <source>Please select a privacy level.</source>
         <translation>Veuillez choisir un niveau de confidentialité.</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="78"/>
+        <location filename="../forms/freedomsendconfig.ui" line="78"/>
         <source>Use 2 separate masternodes to mix funds up to 1000 DASH</source>
         <translation>Utiliser 2 masternodes pour mélanger jusqu&apos;à 1000 DASH</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="91"/>
+        <location filename="../forms/freedomsendconfig.ui" line="91"/>
         <source>Use 8 separate masternodes to mix funds up to 1000 DASH</source>
         <translation>Utiliser 8 masternodes pour mélanger jusqu&apos;à 1000 DASH</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="104"/>
+        <location filename="../forms/freedomsendconfig.ui" line="104"/>
         <source>Use 16 separate masternodes</source>
         <translation>Utiliser 16 masternodes</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="117"/>
+        <location filename="../forms/freedomsendconfig.ui" line="117"/>
         <source>This option is the quickest and will cost about ~0.025 DASH to anonymize 1000 DASH</source>
         <translation>Cette option est la plus rapide et coûtera environ 0,025 DASH pour anonymiser 1000 DASH</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="130"/>
+        <location filename="../forms/freedomsendconfig.ui" line="130"/>
         <source>This option is moderately fast and will cost about 0.05 DASH to anonymize 1000 DASH</source>
         <translation>Cette option est un peu moins rapide et coûtera environ 0,05 DASH pour anonymiser 1000 DASH</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="156"/>
+        <location filename="../forms/freedomsendconfig.ui" line="156"/>
         <source>0.1 DASH per 1000 DASH you anonymize.</source>
         <translation>0,1 DASH par 1000 DASH anonymisés.</translation>
     </message>
     <message>
-        <location filename="../forms/darksendconfig.ui" line="143"/>
+        <location filename="../forms/freedomsendconfig.ui" line="143"/>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Cette option est le plus lente et la plus sécurisée. Utiliser l&apos;anonymisation maximale coûtera</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="43"/>
-        <location filename="../darksendconfig.cpp" line="58"/>
-        <location filename="../darksendconfig.cpp" line="73"/>
-        <source>Darksend Configuration</source>
-        <translation>Configuration de Darksend</translation>
+        <location filename="../freedomsendconfig.cpp" line="43"/>
+        <location filename="../freedomsendconfig.cpp" line="58"/>
+        <location filename="../freedomsendconfig.cpp" line="73"/>
+        <source>Freedomsend Configuration</source>
+        <translation>Configuration de Freedomsend</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="44"/>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
-        <translation>Darksend est réglé avec succès sur normal (%1 and 2 rounds). Vous pouvez changer cela à tout moment en ouvrant la fenêtre de configuration du Chaincoin.</translation>
+        <location filename="../freedomsendconfig.cpp" line="44"/>
+        <source>Freedomsend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <translation>Freedomsend est réglé avec succès sur normal (%1 and 2 rounds). Vous pouvez changer cela à tout moment en ouvrant la fenêtre de configuration du Chaincoin.</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="59"/>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
-        <translation>Darksend est réglé avec succès sur haut (%1 and 8 rounds). Vous pouvez changer cela à tout moment en ouvrant la fenêtre de configuration du Chaincoin.</translation>
+        <location filename="../freedomsendconfig.cpp" line="59"/>
+        <source>Freedomsend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <translation>Freedomsend est réglé avec succès sur haut (%1 and 8 rounds). Vous pouvez changer cela à tout moment en ouvrant la fenêtre de configuration du Chaincoin.</translation>
     </message>
     <message>
-        <location filename="../darksendconfig.cpp" line="74"/>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
-        <translation>Darksend est réglé avec succès sur maximum (%1 and 16 rounds). Vous pouvez changer cela à tout moment en ouvrant la fenêtre de configuration du Chaincoin.</translation>
+        <location filename="../freedomsendconfig.cpp" line="74"/>
+        <source>Freedomsend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <translation>Freedomsend est réglé avec succès sur maximum (%1 and 16 rounds). Vous pouvez changer cela à tout moment en ouvrant la fenêtre de configuration du Chaincoin.</translation>
     </message>
 </context>
 <context>
@@ -1481,13 +1481,13 @@ Adresse : %4
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="141"/>
-        <source>Darksend rounds to use</source>
-        <translation>Nombre de cycles Darksend à effectuer</translation>
+        <source>Freedomsend rounds to use</source>
+        <translation>Nombre de cycles Freedomsend à effectuer</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="165"/>
-        <source>This amount acts as a threshold to turn off Darksend once it&apos;s reached.</source>
-        <translation>Ce montant est le seuil pour désactiver Darksend dès qu&apos;il est atteint.</translation>
+        <source>This amount acts as a threshold to turn off Freedomsend once it&apos;s reached.</source>
+        <translation>Ce montant est le seuil pour désactiver Freedomsend dès qu&apos;il est atteint.</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="180"/>
@@ -1805,8 +1805,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="336"/>
-        <source>Darksend Balance:</source>
-        <translation>Balance Darksend :</translation>
+        <source>Freedomsend Balance:</source>
+        <translation>Balance Freedomsend :</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="349"/>
@@ -1843,8 +1843,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <location filename="../overviewpage.cpp" line="453"/>
         <location filename="../overviewpage.cpp" line="467"/>
         <location filename="../overviewpage.cpp" line="481"/>
-        <source>Darksend</source>
-        <translation>Darksend</translation>
+        <source>Freedomsend</source>
+        <translation>Freedomsend</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="839"/>
@@ -1858,8 +1858,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="896"/>
-        <source>Try to manually submit a Darksend request.</source>
-        <translation>Essayer de soumettre manuellement une requête Darksend.</translation>
+        <source>Try to manually submit a Freedomsend request.</source>
+        <translation>Essayer de soumettre manuellement une requête Freedomsend.</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="899"/>
@@ -1868,8 +1868,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="918"/>
-        <source>Reset the current status of Darksend (can interrupt Darksend if it&apos;s in the process of Mixing, which can cost you money!)</source>
-        <translation>Réinitialiser le statut de Darksend (peut interrompre Darksend si le process de mélange est en cours, ce qui peut vous coûter de l&apos;argent !)</translation>
+        <source>Reset the current status of Freedomsend (can interrupt Freedomsend if it&apos;s in the process of Mixing, which can cost you money!)</source>
+        <translation>Réinitialiser le statut de Freedomsend (peut interrompre Freedomsend si le process de mélange est en cours, ce qui peut vous coûter de l&apos;argent !)</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="924"/>
@@ -1898,14 +1898,14 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <location filename="../overviewpage.cpp" line="146"/>
         <location filename="../overviewpage.cpp" line="352"/>
         <location filename="../overviewpage.cpp" line="495"/>
-        <source>Start Darksend Mixing</source>
-        <translation>Démarrer le mélange Darksend</translation>
+        <source>Start Freedomsend Mixing</source>
+        <translation>Démarrer le mélange Freedomsend</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="148"/>
         <location filename="../overviewpage.cpp" line="497"/>
-        <source>Stop Darksend Mixing</source>
-        <translation>Arrêter le mélange Darksend</translation>
+        <source>Stop Freedomsend Mixing</source>
+        <translation>Arrêter le mélange Freedomsend</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="270"/>
@@ -1929,16 +1929,16 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="424"/>
-        <source>Last Darksend message:
+        <source>Last Freedomsend message:
 </source>
-        <translation>Dernier message de Darksend:
+        <translation>Dernier message de Freedomsend:
 </translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="377"/>
         <location filename="../overviewpage.cpp" line="406"/>
-        <source>Darksend is idle.</source>
-        <translation>Darksend est inactif.</translation>
+        <source>Freedomsend is idle.</source>
+        <translation>Freedomsend est inactif.</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="381"/>
@@ -1947,8 +1947,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="387"/>
-        <source>Darksend request complete: Your transaction was accepted into the pool!</source>
-        <translation>Requête de Darksend terminée : Votre transaction a été acceptée dans le pool!</translation>
+        <source>Freedomsend request complete: Your transaction was accepted into the pool!</source>
+        <translation>Requête de Freedomsend terminée : Votre transaction a été acceptée dans le pool!</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="393"/>
@@ -1994,8 +1994,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="410"/>
-        <source>Darksend request incomplete:</source>
-        <translation>Requête Darksend incomplète.</translation>
+        <source>Freedomsend request incomplete:</source>
+        <translation>Requête Freedomsend incomplète.</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="410"/>
@@ -2004,8 +2004,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="412"/>
-        <source>Darksend request complete:</source>
-        <translation>Requête Darksend complète :</translation>
+        <source>Freedomsend request complete:</source>
+        <translation>Requête Freedomsend complète :</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="414"/>
@@ -2034,18 +2034,18 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="454"/>
-        <source>Darksend was successfully reset.</source>
-        <translation>Darksend est réinitialisé avec succès</translation>
+        <source>Freedomsend was successfully reset.</source>
+        <translation>Freedomsend est réinitialisé avec succès</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="468"/>
-        <source>Darksend requires at least %1 to use.</source>
-        <translation>Darksend nécessite au moins %1 pour l&apos;utiliser</translation>
+        <source>Freedomsend requires at least %1 to use.</source>
+        <translation>Freedomsend nécessite au moins %1 pour l&apos;utiliser</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="482"/>
-        <source>Wallet is locked and user declined to unlock. Disabling Darksend.</source>
-        <translation>Le portefeuille est vérouillé et l&apos;utilisateur a refusé de le débloquer. Désactivation de Darksend.</translation>
+        <source>Wallet is locked and user declined to unlock. Disabling Freedomsend.</source>
+        <translation>Le portefeuille est vérouillé et l&apos;utilisateur a refusé de le débloquer. Désactivation de Freedomsend.</translation>
     </message>
 </context>
 <context>
@@ -2734,8 +2734,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="752"/>
-        <source>Darksend</source>
-        <translation>Darksend</translation>
+        <source>Freedomsend</source>
+        <translation>Freedomsend</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="771"/>
@@ -2802,8 +2802,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="155"/>
-        <source>(darksend requires this amount to be rounded up to the nearest %1).</source>
-        <translation>(darksend nécessite que ce montant soit arrondi au plus proche de %1).</translation>
+        <source>(freedomsend requires this amount to be rounded up to the nearest %1).</source>
+        <translation>(freedomsend nécessite que ce montant soit arrondi au plus proche de %1).</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="160"/>
@@ -3575,8 +3575,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="358"/>
-        <source>Received via Darksend</source>
-        <translation>Reçu par Darksend</translation>
+        <source>Received via Freedomsend</source>
+        <translation>Reçu par Freedomsend</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="361"/>
@@ -3595,28 +3595,28 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="368"/>
-        <source>Darksend Denominate</source>
-        <translation>Dénomination Darksend</translation>
+        <source>Freedomsend Denominate</source>
+        <translation>Dénomination Freedomsend</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="370"/>
-        <source>Darksend Collateral Payment</source>
-        <translation>Paiement Darksend Collatéral</translation>
+        <source>Freedomsend Collateral Payment</source>
+        <translation>Paiement Freedomsend Collatéral</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="372"/>
-        <source>Darksend Make Collateral Inputs</source>
+        <source>Freedomsend Make Collateral Inputs</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="374"/>
-        <source>Darksend Create Denominations</source>
+        <source>Freedomsend Create Denominations</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="376"/>
-        <source>Darksent</source>
-        <translation>Darksent</translation>
+        <source>Freedomsent</source>
+        <translation>Freedomsent</translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="418"/>
@@ -3699,28 +3699,28 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="81"/>
-        <source>Darksent</source>
-        <translation>Darksent</translation>
+        <source>Freedomsent</source>
+        <translation>Freedomsent</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="82"/>
-        <source>Darksend Make Collateral Inputs</source>
+        <source>Freedomsend Make Collateral Inputs</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="83"/>
-        <source>Darksend Create Denominations</source>
+        <source>Freedomsend Create Denominations</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="84"/>
-        <source>Darksend Denominate</source>
-        <translation>Dénomination Darksend</translation>
+        <source>Freedomsend Denominate</source>
+        <translation>Dénomination Freedomsend</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="85"/>
-        <source>Darksend Collateral Payment</source>
-        <translation>Paiement Darksend Collatéral</translation>
+        <source>Freedomsend Collateral Payment</source>
+        <translation>Paiement Freedomsend Collatéral</translation>
     </message>
     <message>
         <location filename="../transactionview.cpp" line="86"/>
@@ -3977,13 +3977,13 @@ Pour exemple: alertnotify=echo %%s | mail -s &quot;Alerte Chaincoin&quot; admin@
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="46"/>
-        <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
-        <translation>Darksend utilise les montants dénominés exacts pour envoyer des fonds, vous pourriez simplement avoir besoin d&apos;anonymiser plus de pièces.</translation>
+        <source>Freedomsend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
+        <translation>Freedomsend utilise les montants dénominés exacts pour envoyer des fonds, vous pourriez simplement avoir besoin d&apos;anonymiser plus de pièces.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="49"/>
-        <source>Disable all Masternode and Darksend related functionality (0-1, default: 0)</source>
-        <translation>Désactivez toutes les fonctionnalités liées à Masternode et Darksend (0-1, par défaut: 0)</translation>
+        <source>Disable all Masternode and Freedomsend related functionality (0-1, default: 0)</source>
+        <translation>Désactivez toutes les fonctionnalités liées à Masternode et Freedomsend (0-1, par défaut: 0)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="51"/>
@@ -3992,8 +3992,8 @@ Pour exemple: alertnotify=echo %%s | mail -s &quot;Alerte Chaincoin&quot; admin@
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="54"/>
-        <source>Enable use of automated darksend for funds stored in this wallet (0-1, default: 0)</source>
-        <translation>Activer l&apos;utilisation automatique de Darksend pour les fonds stockés dans ce portefeuille (0-1, défaut: 0)</translation>
+        <source>Enable use of automated freedomsend for funds stored in this wallet (0-1, default: 0)</source>
+        <translation>Activer l&apos;utilisation automatique de Freedomsend pour les fonds stockés dans ce portefeuille (0-1, défaut: 0)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="57"/>
@@ -4072,8 +4072,8 @@ Pour exemple: alertnotify=echo %%s | mail -s &quot;Alerte Chaincoin&quot; admin@
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="101"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
-        <translation>Écouter les connexions JSON-RPC sur &lt;port&gt; (par défaut : 9998 ou tesnet : 19998)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
+        <translation>Écouter les connexions JSON-RPC sur &lt;port&gt; (par défaut : 51401 ou tesnet : 14001)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="103"/>
@@ -4092,8 +4092,8 @@ Pour exemple: alertnotify=echo %%s | mail -s &quot;Alerte Chaincoin&quot; admin@
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="110"/>
-        <source>Provide liquidity to Darksend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
-        <translation>Fournir des liquidités à Darksend en mélangeant occasionnellement mais régulièrement des pièces (0-100, par défaut : 0, 1=très fréquent, frais élevés, 100=très rare, frais bas)</translation>
+        <source>Provide liquidity to Freedomsend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
+        <translation>Fournir des liquidités à Freedomsend en mélangeant occasionnellement mais régulièrement des pièces (0-100, par défaut : 0, 1=très fréquent, frais élevés, 100=très rare, frais bas)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="114"/>
@@ -4137,18 +4137,18 @@ Pour exemple: alertnotify=echo %%s | mail -s &quot;Alerte Chaincoin&quot; admin@
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="136"/>
-        <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
-        <translation>Impossible de localiser suffisamment de fonds Darksend dénominés pour cette transaction.</translation>
+        <source>Unable to locate enough Freedomsend denominated funds for this transaction.</source>
+        <translation>Impossible de localiser suffisamment de fonds Freedomsend dénominés pour cette transaction.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="138"/>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 DASH.</source>
-        <translation>Impossible de localiser suffisamment de fonds non-dénominés Darksend pour cette transaction qui ne sont pas égaux à 1000 DASH.</translation>
+        <source>Unable to locate enough Freedomsend non-denominated funds for this transaction that are not equal 1000 DASH.</source>
+        <translation>Impossible de localiser suffisamment de fonds non-dénominés Freedomsend pour cette transaction qui ne sont pas égaux à 1000 DASH.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="141"/>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction.</source>
-        <translation>Impossible de localiser suffisamment de fonds Darksend non-dénominés  pour cette transaction.</translation>
+        <source>Unable to locate enough Freedomsend non-denominated funds for this transaction.</source>
+        <translation>Impossible de localiser suffisamment de fonds Freedomsend non-dénominés  pour cette transaction.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="143"/>
@@ -4311,7 +4311,7 @@ Si le fichier n&apos;existe pas, créez-le avec les droits de lecture seule acco
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="195"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 51401 or testnet: 14001)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4346,13 +4346,13 @@ Si le fichier n&apos;existe pas, créez-le avec les droits de lecture seule acco
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="202"/>
-        <source>Darksend is disabled.</source>
-        <translation>Darksend est désactivé.</translation>
+        <source>Freedomsend is disabled.</source>
+        <translation>Freedomsend est désactivé.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="203"/>
-        <source>Darksend options:</source>
-        <translation>Options Darksend :</translation>
+        <source>Freedomsend options:</source>
+        <translation>Options Freedomsend :</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="204"/>
@@ -4466,8 +4466,8 @@ Si le fichier n&apos;existe pas, créez-le avec les droits de lecture seule acco
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="226"/>
-        <source>Error: You already have pending entries in the Darksend pool</source>
-        <translation>Erreur : Vous avez déjà des entrées en attente dans la pool Darksend</translation>
+        <source>Error: You already have pending entries in the Freedomsend pool</source>
+        <translation>Erreur : Vous avez déjà des entrées en attente dans la pool Freedomsend</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="227"/>
@@ -4696,13 +4696,13 @@ Si le fichier n&apos;existe pas, créez-le avec les droits de lecture seule acco
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="272"/>
-        <source>Last Darksend was too recent.</source>
-        <translation>Le dernier Darksend est trop récent.</translation>
+        <source>Last Freedomsend was too recent.</source>
+        <translation>Le dernier Freedomsend est trop récent.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="273"/>
-        <source>Last successful darksend action was too recent.</source>
-        <translation>La dernière action Darksend est trop récente.</translation>
+        <source>Last successful freedomsend action was too recent.</source>
+        <translation>La dernière action Freedomsend est trop récente.</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="274"/>
@@ -4716,8 +4716,8 @@ Si le fichier n&apos;existe pas, créez-le avec les droits de lecture seule acco
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>Écouter les connexions sur &lt;port&gt; (par défaut: 9999 ou testnet: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 51400 or testnet: 14000)</source>
+        <translation>Écouter les connexions sur &lt;port&gt; (par défaut: 51400 ou testnet: 14000)</translation>
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="277"/>
@@ -5206,7 +5206,7 @@ Si le fichier n&apos;existe pas, créez-le avec les droits de lecture seule acco
     </message>
     <message>
         <location filename="../chaincoinstrings.cpp" line="374"/>
-        <source>Value more than Darksend pool maximum allows.</source>
+        <source>Value more than Freedomsend pool maximum allows.</source>
         <translation>Valeur supérieure au maximum autorisé par le pool.</translation>
     </message>
     <message>
