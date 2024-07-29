@@ -14,11 +14,12 @@ System DOES NOT Include:
 -----------------
 
 * SUPPORT, ASSISTANCE, WARRANTY OF ANY KIND WHAT-SO-EVER
+* Discord, Chat, or any "official" communique
 * Advertising, shills, moon-sayers, or developers
 * Promise of ANY future value
 * Care about your feelings
 
-PatriotBits are simple, free, worthless digital tokens that enable psuedoanonymous
+PatriotBits are simple, free, **worthless** digital tokens that enable psuedoanonymous
 transfers to anyone, anywhere on network. PatriotBit uses ancient peer-to-peer technology
 to operate with no central authority: managing transactions and issuing tokens
 is carried out collectively by the network. 
