@@ -336,9 +336,9 @@ public:
     void InitCollateralAddress(){
         std::string strAddress = "";
         if(Params().NetworkID() == CChainParams::MAIN) {
-            strAddress = "Xq19GqFvajRrEdDHYRKGYjTsQfpV5jyipF";
+            strAddress = "8d4D5q9wrzv3YgcZtZivCtaiGXgmWW1NXC";
         } else {
-            strAddress = "y1EZuxhhNMAUofTBEeLqGE1bJrpC2TWRNp";
+            strAddress = "JUksmwjU7P9xHUtFoMKeqjpeBsUxqBjHNj";
         }
         SetCollateralAddress(strAddress);
     }
