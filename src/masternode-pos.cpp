@@ -163,7 +163,7 @@ void CMasternodeScanning::DoMasternodePOSChecks()
     if(pmn == NULL) return;
 
     // -- first check : Port is open
-
+    /*
     if(!ConnectNode((CAddress)pmn->addr, NULL, true)){
         // we couldn't connect to the node, let's send a scanning error
         CMasternodeScanningError mnse(activeMasternode.vin, pmn->vin, SCANNING_ERROR_NO_RESPONSE, nBlockHeight);
@@ -171,6 +171,7 @@ void CMasternodeScanning::DoMasternodePOSChecks()
         mapMasternodeScanningErrors.insert(make_pair(mnse.GetHash(), mnse));
         mnse.Relay();
     }
+    */
 
     // success
     CMasternodeScanningError mnse(activeMasternode.vin, pmn->vin, SCANNING_SUCCESS, nBlockHeight);
