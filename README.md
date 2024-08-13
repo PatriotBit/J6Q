@@ -1,4 +1,4 @@
-PatriotBit Secure Compartmentalized Information Center 1.6.2021-NCSWIC
+PatriotBit Secure Compartmentalized Information Center 1.6.2023-NCSWIC
 ===============================
 
 Copyright (c) 2016-2025 We The People.
@@ -19,7 +19,7 @@ System DOES NOT Include:
 * Promise of ANY future value
 * Care about your feelings
 
-PatriotBits are simple, free, **worthless** digital tokens that enable psuedoanonymous
+PatriotBits are simple, free, worthless digital tokens that enable psuedoanonymous
 transfers to anyone, anywhere on network. PatriotBit uses ancient peer-to-peer technology
 to operate with no central authority: managing transactions and issuing tokens
 is carried out collectively by the network. 
