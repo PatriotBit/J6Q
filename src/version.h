@@ -27,7 +27,8 @@ extern const std::string CLIENT_DATE;
 // network protocol versioning
 //
 
-static const int PROTOCOL_VERSION = 80005;
+//static const int PROTOCOL_VERSION = 80005; // nodes with broken masternode
+static const int PROTOCOL_VERSION = 80006;
 
 // intial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;

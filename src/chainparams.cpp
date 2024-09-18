@@ -21,7 +21,7 @@ using namespace boost::assign;
 
 unsigned int pnSeed[] =
 {
-    0x12345678
+    0xca51eed8, 0x9552c718, 0x0c909e33,
 };
 
 class CMainParams : public CChainParams {
@@ -63,6 +63,8 @@ public:
 
         vSeeds.push_back(CDNSSeedData("bits.silentpatriot.com", "bits.silentpatriot.com"));
         vSeeds.push_back(CDNSSeedData("216.238.81.202", "216.238.81.202"));
+        vSeeds.push_back(CDNSSeedData("24.199.82.149", "24.199.82.149"));
+        vSeeds.push_back(CDNSSeedData("51.158.144.12", "51.158.144.12"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,18);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,18);
@@ -120,6 +122,8 @@ public:
         vSeeds.clear();
         vSeeds.push_back(CDNSSeedData("bits.silentpatriot.com", "bits.silentpatriot.com"));
         vSeeds.push_back(CDNSSeedData("216.238.81.202", "216.238.81.202"));
+        vSeeds.push_back(CDNSSeedData("24.199.82.149", "24.199.82.149"));
+        vSeeds.push_back(CDNSSeedData("51.158.144.12", "51.158.144.12"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,43);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,43);
