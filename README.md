@@ -1,32 +1,33 @@
-PatriotBit Secure Compartmentalized Information Facility 1.6.2024-NCSWIC
+PatriotBit Secure Compartmentalized Information Facility 1.20.2025-DADDYSHOME
 ===============================
 
-Copyright (c) 2016-2025 We The People.
+Copyright (c) 2016-Esto Perpetua, We The People.
 
 System Includes:
 -----------------
 * FREE OPEN SOURCE SOFTWARE
 * Digital tokens to mine, send, share, store, hoard, burn, etc.
 * Blockchain based messaging, masternodes, coin-control
-* Eagles and Freedom
+* Eagles, Freedom, Cocaine, Pussy
+* ONLY TWO GENDERS
 
 System DOES NOT Include:
 -----------------
 
 * SUPPORT, ASSISTANCE, WARRANTY OF ANY KIND WHAT-SO-EVER
-* Discord, Chat, or any "official" communique
+* Any type of official Discord, Telegram, etc. IRC? Maybe.
 * Advertising, shills, moon-sayers, or developers
 * Promise of ANY future value
 * Care about your feelings
 
-PatriotBits are simple, free, worthless digital tokens that enable psuedoanonymous
-transfers to anyone, anywhere on network. PatriotBit uses ancient peer-to-peer technology
+PatriotBits are simple, free, digital tokens that enable psuedoanonymous transfers
+to anyone, anywhere on network. PatriotBit uses AI-free peer-to-peer technology
 to operate with no central authority: managing transactions and issuing tokens
 is carried out collectively by the network. 
 
 PatriotBit is an open project and there are no "Developers." The SCIF is 10 year old software
 built on a 20 year old laptop for the sake of having something to do on a Friday night. It
-is designed to install and run on all NT-level Windows systems or Debian Jessie.
+is designed to install and run on all NT-level Windows 32/64bit systems or Debian Jessie.
 
 License
 -------
