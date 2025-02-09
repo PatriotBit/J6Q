@@ -1,8 +1,8 @@
 dnl require autoconf 2.60 (AS_ECHO/AS_ECHO_N)
 AC_PREREQ([2.60])
-define(_CLIENT_VERSION_MAJOR, 0)
-define(_CLIENT_VERSION_MINOR, 9)
-define(_CLIENT_VERSION_REVISION, 1)
+define(_CLIENT_VERSION_MAJOR, 1)
+define(_CLIENT_VERSION_MINOR, 20)
+define(_CLIENT_VERSION_REVISION, 2025)
 define(_CLIENT_VERSION_BUILD, 1)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2015)
@@ -10,9 +10,9 @@ AC_INIT([PatriotBit Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_V
 AC_CONFIG_AUX_DIR([src/build-aux])
 AC_CONFIG_MACRO_DIR([src/m4])
 AC_CANONICAL_HOST
-AH_TOP([#ifndef INTERZONE_CONFIG_H])
-AH_TOP([#define INTERZONE_CONFIG_H])
-AH_BOTTOM([#endif //INTERZONE_CONFIG_H])
+AH_TOP([#ifndef PATRIOTBIT_CONFIG_H])
+AH_TOP([#define PATRIOTBIT_CONFIG_H])
+AH_BOTTOM([#endif //PATRIOTBIT_CONFIG_H])
 
 # This m4 will only be used if a system copy cannot be found. This is helpful
 # on systems where autotools are installed but the pkg-config macros are not in

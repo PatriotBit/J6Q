@@ -13,7 +13,7 @@
 const std::string CLIENT_NAME("SCIF");
 
 // Client version number
-#define CLIENT_VERSION_SUFFIX   "-NCSWIC"
+#define CLIENT_VERSION_SUFFIX   "-DADDYSHOME"
 
 
 // The following part of the code determines the CLIENT_BUILD variable.
